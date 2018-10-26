@@ -57,10 +57,10 @@ public class VentanaAlta extends JFrame {
 		button.setBounds(10, 11, 55, 39);
 		contentPane.add(button);
 		
-		JLabel lblPrueba = new JLabel("Prueba");
-		lblPrueba.setFont(new Font("Tahoma", Font.PLAIN, 36));
-		lblPrueba.setBounds(212, 131, 297, 134);
-		contentPane.add(lblPrueba);
+		JLabel lblPrueb = new JLabel("Prueba");
+		lblPrueb.setFont(new Font("Tahoma", Font.PLAIN, 36));
+		lblPrueb.setBounds(212, 131, 297, 134);
+		contentPane.add(lblPrueb);
 	}
 
 }
