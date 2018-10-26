@@ -9,6 +9,8 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
+import javax.swing.JLabel;
+import java.awt.Font;
 
 public class VentanaAlta extends JFrame {
 
@@ -51,6 +53,11 @@ public class VentanaAlta extends JFrame {
 		});
 		button.setBounds(10, 11, 55, 39);
 		contentPane.add(button);
+		
+		JLabel lblPrueba = new JLabel("Prueba");
+		lblPrueba.setFont(new Font("Tahoma", Font.PLAIN, 36));
+		lblPrueba.setBounds(212, 131, 297, 134);
+		contentPane.add(lblPrueba);
 	}
 
 }
