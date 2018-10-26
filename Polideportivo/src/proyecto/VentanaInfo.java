@@ -11,7 +11,7 @@ import javax.swing.border.EmptyBorder;
 import javax.swing.JLabel;
 import java.awt.Font;
 
-public class VentanaAlta extends JFrame {
+public class VentanaInfo extends JFrame {
 
 	/**
 	 * 
@@ -38,7 +38,7 @@ public class VentanaAlta extends JFrame {
 	/**
 	 * Create the frame.
 	 */
-	public VentanaAlta() {
+	public VentanaInfo() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 555, 436);
 		contentPane = new JPanel();
@@ -51,15 +51,15 @@ public class VentanaAlta extends JFrame {
 			public void actionPerformed(ActionEvent e) {
 				VentanaOpcion nuevaVentana = new VentanaOpcion();
 				nuevaVentana.setVisible(true);
-				VentanaAlta.this.dispose();
+				VentanaInfo.this.dispose();
 			}
 		});
 		button.setBounds(10, 11, 55, 39);
 		contentPane.add(button);
 		
-		JLabel lblPrueb = new JLabel("Prueba");
+		JLabel lblPrueb = new JLabel("Aqu\u00ED te saldr\u00E1 informaci\u00F3n \u00FAtil");
 		lblPrueb.setFont(new Font("Tahoma", Font.PLAIN, 36));
-		lblPrueb.setBounds(212, 131, 297, 134);
+		lblPrueb.setBounds(30, 130, 499, 134);
 		contentPane.add(lblPrueb);
 	}
 

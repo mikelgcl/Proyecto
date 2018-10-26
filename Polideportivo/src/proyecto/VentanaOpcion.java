@@ -51,10 +51,10 @@ public class VentanaOpcion extends JFrame {
 				VentanaOpcion.this.dispose();
 			}
 		});
-		btnNewButton.setBounds(89, 91, 117, 115);
+		btnNewButton.setBounds(52, 166, 117, 115);
 		contentPane.add(btnNewButton);
 		
-		JButton btnComprarProductos = new JButton("Comprar productos");
+		JButton btnComprarProductos = new JButton("Alquilar producto");
 		btnComprarProductos.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				VentanaComprar nuevaVentana = new VentanaComprar();
@@ -62,33 +62,22 @@ public class VentanaOpcion extends JFrame {
 				VentanaOpcion.this.dispose();
 			}
 		});
-		btnComprarProductos.setBounds(336, 91, 117, 115);
+		btnComprarProductos.setBounds(377, 166, 117, 115);
 		contentPane.add(btnComprarProductos);
 		
-		JButton btnDarDeAlta = new JButton("Dar de alta");
+		JButton btnDarDeAlta = new JButton("Informaci\u00F3n");
 		btnDarDeAlta.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				VentanaAlta nuevaVentana = new VentanaAlta();
+				VentanaInfo nuevaVentana = new VentanaInfo();
 				nuevaVentana.setVisible(true);
 				VentanaOpcion.this.dispose();
 			}
 		});
-		btnDarDeAlta.setBounds(89, 238, 117, 115);
+		btnDarDeAlta.setBounds(212, 166, 117, 115);
 		contentPane.add(btnDarDeAlta);
 		
-		JButton btnNuevoUsuario = new JButton("Nuevo usuario");
-		btnNuevoUsuario.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				VentanaNuevo nuevaVentana = new VentanaNuevo();
-				nuevaVentana.setVisible(true);
-				VentanaOpcion.this.dispose();
-			}
-		});
-		btnNuevoUsuario.setBounds(336, 238, 117, 115);
-		contentPane.add(btnNuevoUsuario);
-		
 		JLabel lblElijeUnaOperacin = new JLabel("Elije una operaci\u00F3n");
-		lblElijeUnaOperacin.setFont(new Font("Tahoma", Font.PLAIN, 26));
+		lblElijeUnaOperacin.setFont(new Font("Tahoma", Font.PLAIN, 30));
 		lblElijeUnaOperacin.setBounds(23, 25, 339, 37);
 		contentPane.add(lblElijeUnaOperacin);
 	}

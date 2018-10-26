@@ -9,6 +9,7 @@ import javax.swing.border.EmptyBorder;
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
+import javax.swing.JLabel;
 
 public class VentanaComprar extends JFrame {
 
@@ -53,6 +54,38 @@ public class VentanaComprar extends JFrame {
 		});
 		button.setBounds(10, 11, 55, 39);
 		contentPane.add(button);
+		
+		JButton btnRaquetaTenis = new JButton("Raqueta tenis");
+		btnRaquetaTenis.setBounds(65, 180, 138, 23);
+		contentPane.add(btnRaquetaTenis);
+		
+		JButton btnRaquetaPdel = new JButton("Raqueta p\u00E1del");
+		btnRaquetaPdel.setBounds(351, 180, 138, 23);
+		contentPane.add(btnRaquetaPdel);
+		
+		JButton btnBalnFtbol = new JButton("Bal\u00F3n f\u00FAtbol");
+		btnBalnFtbol.setBounds(65, 339, 138, 23);
+		contentPane.add(btnBalnFtbol);
+		
+		JButton btnBalnBaloncesto = new JButton("Bal\u00F3n baloncesto");
+		btnBalnBaloncesto.setBounds(351, 339, 138, 23);
+		contentPane.add(btnBalnBaloncesto);
+		
+		JLabel lblNewLabel = new JLabel("     Precio /n foto /n Desc");
+		lblNewLabel.setBounds(65, 74, 138, 99);
+		contentPane.add(lblNewLabel);
+		
+		JLabel label = new JLabel("     Precio /n foto /n Desc");
+		label.setBounds(351, 74, 138, 99);
+		contentPane.add(label);
+		
+		JLabel label_1 = new JLabel("     Precio /n foto /n Desc");
+		label_1.setBounds(65, 229, 138, 99);
+		contentPane.add(label_1);
+		
+		JLabel label_2 = new JLabel("     Precio /n foto /n Desc");
+		label_2.setBounds(351, 229, 138, 99);
+		contentPane.add(label_2);
 	}
 
 }

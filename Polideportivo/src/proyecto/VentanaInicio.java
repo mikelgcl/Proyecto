@@ -81,6 +81,19 @@ public class VentanaInicio extends JFrame {
 		passwordField.setBounds(157, 131, 108, 20);
 		contentPane.add(passwordField);
 		
+		JButton btnNuevoUsuario = new JButton("Nuevo Usuario");
+		btnNuevoUsuario.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				
+				VentanaNUsu nuevaVentana = new VentanaNUsu(); 
+				nuevaVentana.setVisible(true);
+				VentanaInicio.this.dispose();
+				
+			}
+		});
+		btnNuevoUsuario.setBounds(307, 227, 117, 23);
+		contentPane.add(btnNuevoUsuario);
+		
 		
 	}
 }
