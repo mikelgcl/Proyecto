@@ -45,7 +45,7 @@ public class VentanaBaloncesto extends JFrame {
 		contentPane.setLayout(null);
 		
 		JLabel lblNewLabel = new JLabel("New label");
-		lblNewLabel.setIcon(new ImageIcon("C:\\Users\\Mikel\\Documents\\balon.png"));
+		lblNewLabel.setIcon(new ImageIcon("C:\\Users\\Mikel\\Downloads\\icons8-jugador-de-f\u00FAtbol-americano-100.png"));
 		lblNewLabel.setBounds(10, 101, 98, 100);
 		contentPane.add(lblNewLabel);
 		
