@@ -14,6 +14,8 @@ public class VentanaComprar extends JFrame {
 
 	private JPanel contentPane;
 
+	
+	//Comentario prueba
 	/**
 	 * Launch the application.
 	 */
