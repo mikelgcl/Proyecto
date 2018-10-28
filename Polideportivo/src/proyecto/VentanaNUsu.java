@@ -7,6 +7,8 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
+
 import java.awt.Font;
 import javax.swing.JButton;
 import javax.swing.JTextField;
@@ -97,6 +99,16 @@ public class VentanaNUsu extends JFrame {
 		contentPane.add(btnAtrs);
 		
 		JButton btnCrearUsuario = new JButton("Crear usuario");
+		btnCrearUsuario.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				//Meter aquí mensaje de "listo"
+				JOptionPane.showMessageDialog(btnCrearUsuario, "Usuario creado correctamente", "", 1);
+				
+				VentanaInicio nuevaVentana = new VentanaInicio(); 
+				nuevaVentana.setVisible(true);
+				VentanaNUsu.this.dispose();
+			}
+		});
 		btnCrearUsuario.setBounds(230, 395, 110, 23);
 		contentPane.add(btnCrearUsuario);
 		
