@@ -74,6 +74,10 @@ public class VentanaBaloncesto extends JFrame {
 		});
 		btnNewButton.setBounds(10, 11, 68, 27);
 		contentPane.add(btnNewButton);
+		
+		JLabel lblNewLabel_1 = new JLabel("New label");
+		lblNewLabel_1.setIcon(new ImageIcon("C:\\Users\\mikelgc\\Pictures\\Screenshots\\Captura de pantalla (42).png"));
+		lblNewLabel_1.setBounds(10, 236, 519, 150);
+		contentPane.add(lblNewLabel_1);
 	}
-
 }

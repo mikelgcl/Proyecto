@@ -1,5 +1,6 @@
 package proyecto;
 
+import java.awt.Dimension;
 import java.awt.EventQueue;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -10,6 +11,8 @@ import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 import javax.swing.JLabel;
 import java.awt.Font;
+import javax.swing.JTextPane;
+import javax.swing.JScrollBar;
 
 public class VentanaInfo extends JFrame {
 
@@ -57,10 +60,17 @@ public class VentanaInfo extends JFrame {
 		button.setBounds(10, 11, 55, 39);
 		contentPane.add(button);
 		
-		JLabel lblPrueb = new JLabel("Aqu\u00ED te saldr\u00E1 informaci\u00F3n \u00FAtil");
-		lblPrueb.setFont(new Font("Tahoma", Font.PLAIN, 36));
-		lblPrueb.setBounds(30, 130, 499, 134);
+		JLabel lblPrueb = new JLabel("Informaci\u00F3n \u00FAtil sobre reserva de pistas y alquiler de productos:");
+		lblPrueb.setFont(new Font("Tahoma", Font.PLAIN, 13));
+		lblPrueb.setBounds(10, 52, 394, 32);
 		contentPane.add(lblPrueb);
+		
+		JTextPane txtpnBastaConQue = new JTextPane();
+		txtpnBastaConQue.setFont(new Font("Tahoma", Font.PLAIN, 12));
+		txtpnBastaConQue.setText("Basta con que el arrendatario optante, dentro del plazo estipulado, manifieste su decisi\u00F3n de llevar a cabo la compra notificando su voluntad positiva en este sentido al concedente. Esa manifestaci\u00F3n pueda ser t\u00E1cita si no se concreta una forma espec\u00EDfica para hacerla efectiva, aunque si se pacta una habr\u00E1 que estar a lo pactado. Lo m\u00E1s normal es pactar que se haga mediante acta notarial. Pero l\u00F3gicamente, la manifestaci\u00F3n debe ser clara, de modo que la Jurisprudencia ha entendido que la simple designaci\u00F3n de una notar\u00EDa por el arrendatario no ser\u00EDa suficiente. Ser\u00E1, l\u00F3gicamente, el convenido por las partes. En ausencia de plazo para el ejercicio de la opci\u00F3n, cualquiera de las partes pueden pedir al Juez que sea este quien lo fije. Si bien, en defecto de plazo, la Jurisprudencia suele apuntar el plazo fijado para el arrendamiento con exclusi\u00F3n de las pr\u00F3rrogas legales y t\u00E1citas. Ser\u00E1, l\u00F3gicamente, el convenido por las partes. En ausencia de plazo para el ejercicio de la opci\u00F3n, cualquiera de las partes pueden pedir al Juez que sea este quien lo fije. Si bien, en defecto de plazo, la Jurisprudencia suele apuntar el plazo fijado para el arrendamiento con exclusi\u00F3n de las pr\u00F3rrogas legales y t\u00E1citas. Ser\u00E1, l\u00F3gicamente, el convenido por las partes. En ausencia de plazo para el ejercicio de la opci\u00F3n, cualquiera de las partes pueden pedir al Juez que sea este quien lo fije. Si bien, en defecto de plazo, la Jurisprudencia suele apuntar el plazo fijado para el arrendamiento con exclusi\u00F3n de las pr\u00F3rrogas legales y t\u00E1citas.  ");
+		txtpnBastaConQue.setBounds(10, 94, 501, 278);
+		
+		contentPane.add(txtpnBastaConQue);
+	
 	}
-
 }
