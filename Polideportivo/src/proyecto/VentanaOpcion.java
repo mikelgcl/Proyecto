@@ -51,7 +51,7 @@ public class VentanaOpcion extends JFrame {
 				VentanaOpcion.this.dispose();
 			}
 		});
-		btnNewButton.setBounds(52, 166, 117, 115);
+		btnNewButton.setBounds(23, 166, 132, 115);
 		contentPane.add(btnNewButton);
 		
 		JButton btnComprarProductos = new JButton("Alquilar producto");
@@ -62,7 +62,7 @@ public class VentanaOpcion extends JFrame {
 				VentanaOpcion.this.dispose();
 			}
 		});
-		btnComprarProductos.setBounds(377, 166, 117, 115);
+		btnComprarProductos.setBounds(189, 166, 149, 115);
 		contentPane.add(btnComprarProductos);
 		
 		JButton btnDarDeAlta = new JButton("Informaci\u00F3n");
@@ -73,7 +73,7 @@ public class VentanaOpcion extends JFrame {
 				VentanaOpcion.this.dispose();
 			}
 		});
-		btnDarDeAlta.setBounds(212, 166, 117, 115);
+		btnDarDeAlta.setBounds(375, 166, 132, 115);
 		contentPane.add(btnDarDeAlta);
 		
 		JLabel lblElijeUnaOperacin = new JLabel("Elije una operaci\u00F3n");
