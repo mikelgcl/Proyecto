@@ -10,6 +10,7 @@ import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 
 public class VentanaComprar extends JFrame {
 
@@ -56,18 +57,38 @@ public class VentanaComprar extends JFrame {
 		contentPane.add(button);
 		
 		JButton btnRaquetaTenis = new JButton("Raqueta tenis");
+		btnRaquetaTenis.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				JOptionPane.showMessageDialog(btnRaquetaTenis, "Raqueta de tenis alquilada correctamente", "Alquilar", 1);
+			}
+		});
 		btnRaquetaTenis.setBounds(65, 180, 138, 23);
 		contentPane.add(btnRaquetaTenis);
 		
 		JButton btnRaquetaPdel = new JButton("Raqueta p\u00E1del");
+		btnRaquetaPdel.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				JOptionPane.showMessageDialog(btnRaquetaTenis, "Raqueta de pádel alquilada correctamente", "Alquilar", 1);
+			}
+		});
 		btnRaquetaPdel.setBounds(351, 180, 138, 23);
 		contentPane.add(btnRaquetaPdel);
 		
 		JButton btnBalnFtbol = new JButton("Bal\u00F3n f\u00FAtbol");
+		btnBalnFtbol.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				JOptionPane.showMessageDialog(btnRaquetaTenis, "Balón de fútbol alquilado correctamente", "Alquilar", 1);
+			}
+		});
 		btnBalnFtbol.setBounds(65, 339, 138, 23);
 		contentPane.add(btnBalnFtbol);
 		
 		JButton btnBalnBaloncesto = new JButton("Bal\u00F3n baloncesto");
+		btnBalnBaloncesto.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				JOptionPane.showMessageDialog(btnRaquetaTenis, "Pelota de baloncesto alquilada correctamente", "Alquilar", 1);
+			}
+		});
 		btnBalnBaloncesto.setBounds(351, 339, 138, 23);
 		contentPane.add(btnBalnBaloncesto);
 		
