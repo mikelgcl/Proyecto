@@ -8,6 +8,7 @@ import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 import javax.swing.JTextField;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JButton;
 import java.awt.Font;
 import javax.swing.JPasswordField;
@@ -63,10 +64,17 @@ public class VentanaInicio extends JFrame {
 		
 		JButton btnEntrar = new JButton("Entrar");
 		btnEntrar.addActionListener(new ActionListener() {
+			
+			
 			public void actionPerformed(ActionEvent e) {
-				VentanaOpcion nuevaVentana = new VentanaOpcion(); 
-				nuevaVentana.setVisible(true);
-				VentanaInicio.this.dispose();
+			
+				
+					VentanaOpcion nuevaVentana = new VentanaOpcion(); 
+					nuevaVentana.setVisible(true);
+					VentanaInicio.this.dispose();
+			
+				
+			
 			}
 		});
 		btnEntrar.setBounds(157, 162, 108, 20);

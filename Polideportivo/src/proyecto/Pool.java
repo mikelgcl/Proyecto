@@ -1,17 +1,24 @@
 package proyecto;
 
-import javax.sql.DataSource;
+/*import javax.sql.DataSource;
 
 import org.apache.commons.dbcp.BasicDataSource;
 
 public class Pool {
 	
-	public DataSource datasource;
+	public DataSource dataSource;
 	
 	public String db = "polideportivo";
 	public String url = "jdbc:mysql://localhost/"+db;
 	public String user = "root";
 	public String pass = "Olatz123gc";
+	
+	public Pool() {
+		inicilizaDataSource();
+	}
+	
+	
+	
 	
 	private void inicilizaDataSource() {
 		
@@ -22,6 +29,9 @@ public class Pool {
 		basicDataSource.setPassword(pass);
 		basicDataSource.setUrl(url);
 		basicDataSource.setMaxActive(50);
+		
+		dataSource = basicDataSource;
+		
 	}
 
-}
+}*/
