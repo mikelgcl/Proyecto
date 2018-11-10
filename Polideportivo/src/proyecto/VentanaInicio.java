@@ -18,8 +18,8 @@ public class VentanaInicio extends JFrame {
 
 	private JPanel contentPane;
 	private JTextField txtHolaQueTal;
-	private JTextField textField;
-	private JPasswordField passwordField;
+	public static JTextField textUsuario;
+	public static JPasswordField textContraseña;
 
 	/**
 	 * Launch the application.
@@ -48,10 +48,10 @@ public class VentanaInicio extends JFrame {
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
-		textField = new JTextField();
-		textField.setBounds(157, 100, 108, 20);
-		contentPane.add(textField);
-		textField.setColumns(10);
+		textUsuario = new JTextField();
+		textUsuario.setBounds(157, 100, 108, 20);
+		contentPane.add(textUsuario);
+		textUsuario.setColumns(10);
 		
 		JLabel lblUsuario = new JLabel("Usuario");
 		lblUsuario.setBounds(70, 103, 77, 14);
@@ -77,9 +77,9 @@ public class VentanaInicio extends JFrame {
 		lblPolideportivoDeusto.setBounds(85, 11, 296, 54);
 		contentPane.add(lblPolideportivoDeusto);
 		
-		passwordField = new JPasswordField();
-		passwordField.setBounds(157, 131, 108, 20);
-		contentPane.add(passwordField);
+		textContraseña = new JPasswordField();
+		textContraseña.setBounds(157, 131, 108, 20);
+		contentPane.add(textContraseña);
 		
 		JButton btnNuevoUsuario = new JButton("Nuevo Usuario");
 		btnNuevoUsuario.addActionListener(new ActionListener() {
@@ -95,5 +95,10 @@ public class VentanaInicio extends JFrame {
 		contentPane.add(btnNuevoUsuario);
 		
 		
+		
+		
 	}
+	
+
+	
 }
