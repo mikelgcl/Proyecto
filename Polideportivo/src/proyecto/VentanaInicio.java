@@ -68,10 +68,14 @@ public class VentanaInicio extends JFrame {
 			
 			public void actionPerformed(ActionEvent e) {
 			
-				
-					VentanaOpcion nuevaVentana = new VentanaOpcion(); 
+				if (textUsuario.getText().equals("mikelgcl" ) && textContraseña.getPassword().equals("1234")) {
+					/*VentanaOpcion nuevaVentana = new VentanaOpcion(); 
 					nuevaVentana.setVisible(true);
-					VentanaInicio.this.dispose();
+					VentanaInicio.this.dispose();*/
+					System.out.println("WTF");
+				} else {
+					JOptionPane.showMessageDialog(btnEntrar, "Usuario o contraseña incorrectos");
+				}
 			
 				
 			
