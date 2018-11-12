@@ -6,7 +6,7 @@ public class Usuario {
 String nombre;
 String DNI;
 String nick;
-String Contraseña;
+String contraseña;
 int cod_u;
 Date na  ;
 	public static void main(String[] args) {
