@@ -11,6 +11,7 @@ import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
+import javax.swing.ImageIcon;
 
 public class VentanaComprar extends JFrame {
 
@@ -93,10 +94,12 @@ public class VentanaComprar extends JFrame {
 		contentPane.add(btnBalnBaloncesto);
 		
 		JLabel lblNewLabel = new JLabel("     Precio /n foto /n Desc");
+		lblNewLabel.setIcon(new ImageIcon("C:\\Users\\Mikel\\git\\polideportivo2\\Polideportivo\\images\\raket (2).jpg"));
 		lblNewLabel.setBounds(65, 74, 138, 99);
 		contentPane.add(lblNewLabel);
 		
 		JLabel label = new JLabel("     Precio /n foto /n Desc");
+		label.setIcon(new ImageIcon("C:\\Users\\Mikel\\git\\polideportivo2\\Polideportivo\\images\\pala-padel-enebe-rsx-carbon-evo (2).jpg"));
 		label.setBounds(351, 74, 138, 99);
 		contentPane.add(label);
 		
