@@ -104,10 +104,12 @@ public class VentanaComprar extends JFrame {
 		contentPane.add(label);
 		
 		JLabel label_1 = new JLabel("     Precio /n foto /n Desc");
+		label_1.setIcon(new ImageIcon("C:\\Users\\Mikel\\git\\polideportivo2\\Polideportivo\\images\\1441988783_165642_1442161238_sumario_normal (1).jpg"));
 		label_1.setBounds(65, 229, 138, 99);
 		contentPane.add(label_1);
 		
 		JLabel label_2 = new JLabel("     Precio /n foto /n Desc");
+		label_2.setIcon(new ImageIcon("C:\\Users\\Mikel\\git\\polideportivo2\\Polideportivo\\images\\20171127140647-18041-web (1).jpg"));
 		label_2.setBounds(351, 229, 138, 99);
 		contentPane.add(label_2);
 	}
