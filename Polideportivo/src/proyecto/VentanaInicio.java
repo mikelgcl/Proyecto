@@ -68,20 +68,20 @@ public class VentanaInicio extends JFrame {
 			
 			public void actionPerformed(ActionEvent e) {
 			
-				if (textUsuario.getText().equals("mikelgcl" ) && textContraseña.getPassword().equals("1234")) {
+				/*if (textUsuario.getText().equals("mikelgcl" ) && textContraseña.getPassword().equals("1234")) {
 					VentanaOpcion nuevaVentana = new VentanaOpcion(); 
 					nuevaVentana.setVisible(true);
 					VentanaInicio.this.dispose();
 					System.out.println("WTF");
 				} else {
 					JOptionPane.showMessageDialog(btnEntrar, "Usuario o contraseña incorrectos");
-				}
+				}*/
 			
 				
 			
 			}
 		});
-		btnEntrar.setBounds(28, 228, 108, 20);
+		btnEntrar.setBounds(10, 211, 108, 20);
 		contentPane.add(btnEntrar);
 		
 		JLabel lblPolideportivoDeusto = new JLabel("Polideportivo Deusto");
