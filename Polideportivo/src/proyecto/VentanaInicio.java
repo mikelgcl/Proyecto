@@ -62,7 +62,7 @@ public class VentanaInicio extends JFrame {
 		JLabel lblPolideportivoDeusto_1 = new JLabel("Polideportivo Deusto");
 		lblPolideportivoDeusto_1.setForeground(Color.WHITE);
 		lblPolideportivoDeusto_1.setFont(new Font("Tahoma", Font.BOLD, 25));
-		lblPolideportivoDeusto_1.setBounds(38, 0, 406, 75);
+		lblPolideportivoDeusto_1.setBounds(38, 11, 406, 75);
 		contentPane.add(lblPolideportivoDeusto_1);
 		
 		JButton lblPolideportivoDeusto = new JButton("");
@@ -70,7 +70,7 @@ public class VentanaInicio extends JFrame {
 		lblPolideportivoDeusto.setBackground(SystemColor.textHighlight);
 		lblPolideportivoDeusto.setForeground(Color.WHITE);
 		lblPolideportivoDeusto.setFont(new Font("Gadugi", Font.BOLD, 32));
-		lblPolideportivoDeusto.setBounds(0, 0, 434, 75);
+		lblPolideportivoDeusto.setBounds(0, 0, 434, 93);
 		contentPane.add(lblPolideportivoDeusto);
 		
 		textUsuario = new JTextField();
@@ -107,7 +107,7 @@ public class VentanaInicio extends JFrame {
 			
 			}
 		});
-		btnEntrar.setBounds(59, 226, 72, 20);
+		btnEntrar.setBounds(59, 236, 72, 20);
 		contentPane.add(btnEntrar);
 		
 		textContraseña = new JPasswordField();
@@ -125,7 +125,7 @@ public class VentanaInicio extends JFrame {
 				
 			}
 		});
-		btnNuevoUsuario.setBounds(141, 226, 133, 21);
+		btnNuevoUsuario.setBounds(141, 236, 133, 21);
 		contentPane.add(btnNuevoUsuario);
 		
 		JLabel lblUsuario = new JLabel("Usuario");
