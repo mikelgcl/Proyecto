@@ -20,12 +20,12 @@ public class VentanaNUsu extends JFrame {
 
 	private JPanel contentPane;
 	private JTextField textField;
-	private JTextField textField_1;
 	private JTextField textField_2;
 	private JTextField textField_3;
 	private JTextField textField_4;
 	private JTextField textField_5;
 	private JPasswordField passwordField;
+	private JPasswordField passwordField_1;
 
 	/**
 	 * Launch the application.
@@ -63,8 +63,8 @@ public class VentanaNUsu extends JFrame {
 		lblNombre.setBounds(10, 71, 46, 14);
 		contentPane.add(lblNombre);
 		
-		JLabel lblApellidos = new JLabel("Apellidos");
-		lblApellidos.setBounds(10, 117, 46, 14);
+		JLabel lblApellidos = new JLabel("Contrase\u00F1a");
+		lblApellidos.setBounds(10, 117, 63, 14);
 		contentPane.add(lblApellidos);
 		
 		JLabel lblDni = new JLabel("DNI");
@@ -117,11 +117,6 @@ public class VentanaNUsu extends JFrame {
 		contentPane.add(textField);
 		textField.setColumns(10);
 		
-		textField_1 = new JTextField();
-		textField_1.setBounds(118, 114, 149, 20);
-		contentPane.add(textField_1);
-		textField_1.setColumns(10);
-		
 		textField_2 = new JTextField();
 		textField_2.setBounds(118, 160, 149, 20);
 		contentPane.add(textField_2);
@@ -145,5 +140,9 @@ public class VentanaNUsu extends JFrame {
 		passwordField = new JPasswordField();
 		passwordField.setBounds(118, 326, 39, 23);
 		contentPane.add(passwordField);
+		
+		passwordField_1 = new JPasswordField();
+		passwordField_1.setBounds(118, 114, 149, 20);
+		contentPane.add(passwordField_1);
 	}
 }

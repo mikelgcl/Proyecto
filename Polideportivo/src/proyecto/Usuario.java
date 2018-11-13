@@ -4,19 +4,74 @@ public class Usuario {
 
 	private String nombre;
 	private String contrasenya;
+	private String dni;
+	private String correo;
+	private long numtar;
+	private int contar;
+	private long cadtar;
 	
-	public Usuario(String nombre, String contrasenya) {
+	//Constructor
+	public Usuario(String nombre, String contrasenya, String dni, String correo, long numtar, int contar, long cadtar) {
 		super();
 		this.nombre = nombre;
 		this.contrasenya = contrasenya;
+		this.dni = dni;
+		this.correo = correo;
+		this.numtar = numtar;
+		this.contar = contar;
+		this.cadtar = cadtar;
 	}
 
+	//Getters y Setters
+	public String getDni() {
+		return dni;
+	}
+
+
+	public void setDni(String dni) {
+		this.dni = dni;
+	}
+
+
+	public String getCorreo() {
+		return correo;
+	}
+
+
+	public void setCorreo(String correo) {
+		this.correo = correo;
+	}
+
+
+	public long getNumtar() {
+		return numtar;
+	}
+
+
+	public void setNumtar(long numtar) {
+		this.numtar = numtar;
+	}
+
+
+	public int getContar() {
+		return contar;
+	}
+
+
+	public void setContar(int contar) {
+		this.contar = contar;
+	}
+
+
+	public long getCadtar() {
+		return cadtar;
+	}
+
+
+	public void setCadtar(long cadtar) {
+		this.cadtar = cadtar;
+	}
 	
-	@Override
-	public String toString() {
-		return "Usuario [nombre=" + nombre + ", contrasenya=" + contrasenya + "]";
-	}
-
 
 	public String getNombre() {
 		return nombre;
@@ -33,6 +88,14 @@ public class Usuario {
 	public void setContrasenya(String contrasenya) {
 		this.contrasenya = contrasenya;
 	}
+
+	//To String
+	@Override
+	public String toString() {
+		return "Usuario [nombre=" + nombre + ", contrasenya=" + contrasenya + ", dni=" + dni + ", correo=" + correo
+				+ ", numtar=" + numtar + ", contar=" + contar + ", cadtar=" + cadtar + "]";
+	}
+	
 	
 	
 }

@@ -95,7 +95,7 @@ public class VentanaInicio extends JFrame {
 		btnEntrar.setBackground(UIManager.getColor("Button.background"));
 		btnEntrar.addActionListener(new ActionListener() {
 			
-			
+			//Login
 			public void actionPerformed(ActionEvent e) {
 			
 				String pass = new String(textContraseña.getPassword());

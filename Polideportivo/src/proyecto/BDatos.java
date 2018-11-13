@@ -5,6 +5,7 @@ import java.util.ArrayList;
 
 public class BDatos {
 
+	//Login funcional 
 	public static  ArrayList<Usuario> cargar() {
 		Connection con = null;
 		String sURL = "jdbc:mysql://localhost:3306/bdpolideportivo";
@@ -17,12 +18,12 @@ public class BDatos {
 
 		}
 
-		try (PreparedStatement stmt = con.prepareStatement("SELECT n_usuario, c_usuario FROM usuarios")) {
+		try (PreparedStatement stmt = con.prepareStatement("SELECT * FROM usuario")) {
 			ResultSet rs = stmt.executeQuery();
 
 			while (rs.next()) {
 				
-				Usuario e = new Usuario(rs.getString("n_usuario"), rs.getString("c_usuario"));
+				Usuario e = new Usuario(rs.getString("nombre"), rs.getString("contrasenya"), rs.getString("dni"), rs.getString("correo"), rs.getLong("num_tarjeta"), rs.getInt("con_tarjeta"), rs.getLong("fecha_tarjeta"));
 				usu.add(e);
 
 			}
@@ -33,6 +34,9 @@ public class BDatos {
 		return usu;
 
 	}
+	
+	
+	//Nuevo usuario
 
 
 }
