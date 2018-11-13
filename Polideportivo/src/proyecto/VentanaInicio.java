@@ -52,17 +52,17 @@ public class VentanaInicio extends JFrame {
 	 */
 	public VentanaInicio() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 450, 300);
+		setBounds(100, 100, 348, 342);
 		contentPane = new JPanel();
 		contentPane.setBackground(new Color(255, 255, 255));
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
-		JLabel lblPolideportivoDeusto_1 = new JLabel("      Polideportivo Deusto");
+		JLabel lblPolideportivoDeusto_1 = new JLabel("Polideportivo Deusto");
 		lblPolideportivoDeusto_1.setForeground(Color.WHITE);
-		lblPolideportivoDeusto_1.setFont(new Font("Tahoma", Font.BOLD, 32));
-		lblPolideportivoDeusto_1.setBounds(0, 0, 406, 75);
+		lblPolideportivoDeusto_1.setFont(new Font("Tahoma", Font.BOLD, 25));
+		lblPolideportivoDeusto_1.setBounds(38, 0, 406, 75);
 		contentPane.add(lblPolideportivoDeusto_1);
 		
 		JButton lblPolideportivoDeusto = new JButton("");
@@ -74,25 +74,13 @@ public class VentanaInicio extends JFrame {
 		contentPane.add(lblPolideportivoDeusto);
 		
 		textUsuario = new JTextField();
-		textUsuario.setBounds(157, 100, 108, 20);
+		textUsuario.setBounds(59, 139, 215, 20);
 		contentPane.add(textUsuario);
 		textUsuario.setColumns(10);
 		
-		JLabel lblUsuario = new JLabel("Usuario");
-		lblUsuario.setFont(new Font("Tahoma", Font.BOLD, 13));
-		lblUsuario.setForeground(SystemColor.textHighlight);
-		lblUsuario.setBounds(70, 103, 77, 14);
-		contentPane.add(lblUsuario);
-		
-		JLabel lblContrasea = new JLabel("Contrase\u00F1a");
-		lblContrasea.setFont(new Font("Tahoma", Font.BOLD, 13));
-		lblContrasea.setForeground(SystemColor.textHighlight);
-		lblContrasea.setBounds(70, 134, 77, 14);
-		contentPane.add(lblContrasea);
-		
 		JButton btnEntrar = new JButton("Entrar");
-		btnEntrar.setForeground(new Color(0, 0, 0));
-		btnEntrar.setBackground(UIManager.getColor("Button.background"));
+		btnEntrar.setForeground(SystemColor.text);
+		btnEntrar.setBackground(SystemColor.textHighlight);
 		btnEntrar.addActionListener(new ActionListener() {
 			
 			//Login
@@ -119,14 +107,15 @@ public class VentanaInicio extends JFrame {
 			
 			}
 		});
-		btnEntrar.setBounds(157, 168, 108, 20);
+		btnEntrar.setBounds(59, 226, 72, 20);
 		contentPane.add(btnEntrar);
 		
 		textContraseña = new JPasswordField();
-		textContraseña.setBounds(157, 131, 108, 20);
+		textContraseña.setBounds(59, 188, 215, 20);
 		contentPane.add(textContraseña);
 		
 		JButton btnNuevoUsuario = new JButton("Nuevo Usuario");
+		btnNuevoUsuario.setFont(new Font("Tahoma", Font.PLAIN, 11));
 		btnNuevoUsuario.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				
@@ -136,8 +125,16 @@ public class VentanaInicio extends JFrame {
 				
 			}
 		});
-		btnNuevoUsuario.setBounds(307, 227, 117, 23);
+		btnNuevoUsuario.setBounds(141, 226, 133, 21);
 		contentPane.add(btnNuevoUsuario);
+		
+		JLabel lblUsuario = new JLabel("Usuario");
+		lblUsuario.setBounds(59, 120, 46, 14);
+		contentPane.add(lblUsuario);
+		
+		JLabel lblContrasea = new JLabel("Contrase\u00F1a");
+		lblContrasea.setBounds(59, 170, 72, 14);
+		contentPane.add(lblContrasea);
 		
 		// Carga de usuario
 		usuarios = BDatos.cargar();
