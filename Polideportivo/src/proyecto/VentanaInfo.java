@@ -16,6 +16,7 @@ import java.awt.Scrollbar;
 import javax.swing.JTextPane;
 import javax.swing.JScrollBar;
 import javax.swing.JScrollPane;
+import javax.swing.ScrollPaneConstants;
 
 public class VentanaInfo extends JFrame {
 
@@ -50,10 +51,10 @@ public class VentanaInfo extends JFrame {
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
-		contentPane.setLayout(null);
 		
 	
-		JButton button = new JButton("<<<");
+		JButton button = new JButton("Atrás");
+		button.setBounds(10, 11, 72, 39);
 		button.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				VentanaOpcion nuevaVentana = new VentanaOpcion();
@@ -61,22 +62,22 @@ public class VentanaInfo extends JFrame {
 				VentanaInfo.this.dispose();
 			}
 		});
-		button.setBounds(10, 11, 55, 39);
+		contentPane.setLayout(null);
 		contentPane.add(button);
 		
 		JLabel lblPrueb = new JLabel("Informaci\u00F3n \u00FAtil sobre reserva de pistas y alquiler de productos:");
+		lblPrueb.setBounds(10, 52, 394, 32);
 		lblPrueb.setFont(new Font("Tahoma", Font.PLAIN, 13));
-		lblPrueb.setBounds(10, 52, 394, 32);	
 		contentPane.add(lblPrueb);
 		
+		JScrollPane scrollPane = new JScrollPane();
+		scrollPane.setHorizontalScrollBarPolicy(ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
+		scrollPane.setBounds(10, 83, 519, 303);
+		contentPane.add(scrollPane);
 		
-		JTextPane txtpnBastaConQue = new JTextPane();
-		txtpnBastaConQue.setFont(new Font("Tahoma", Font.PLAIN, 12));
-		txtpnBastaConQue.setText("Basta con que el arrendatario optante, dentro del plazo estipulado, manifieste su decisi\u00F3n de llevar a cabo la compra notificando su voluntad positiva en este sentido al concedente. Esa manifestaci\u00F3n pueda ser t\u00E1cita si no se concreta una forma espec\u00EDfica para hacerla efectiva, aunque si se pacta una habr\u00E1 que estar a lo pactado. Lo m\u00E1s normal es pactar que se haga mediante acta notarial. Pero l\u00F3gicamente, la manifestaci\u00F3n debe ser clara, de modo que la Jurisprudencia ha entendido que la simple designaci\u00F3n de una notar\u00EDa por el arrendatario no ser\u00EDa suficiente. Ser\u00E1, l\u00F3gicamente, el convenido por las partes. En ausencia de plazo para el ejercicio de la opci\u00F3n, cualquiera de las partes pueden pedir al Juez que Basta con que el arrendatario optante, dentro del plazo estipulado, manifieste su decisi\u00F3n de llevar a cabo la compra notificando su voluntad positiva en este sentido al concedente. Esa manifestaci\u00F3n pueda ser t\u00E1cita si no se concreta una forma espec\u00EDfica para hacerla efectiva, aunque si se pacta una habr\u00E1 que estar a lo pactado. Lo m\u00E1s normal es pactar que se haga mediante acta notarial. Pero l\u00F3gicamente, la manifestaci\u00F3n debe ser clara, de modo que la Jurisprudencia ha entendido que la simple designaci\u00F3n de una notar\u00EDa por el arrendatario no ser\u00EDa suficiente. Ser\u00E1, l\u00F3gicamente, el convenido por las partes. En ausencia de plazo para el ejercicio de la opci\u00F3n, cualquiera de las partes pueden pedir al Juez que sea este quien lo fije. Si bien, en defecto de plazo, la Jurisprudencia suele apuntar el plazo fijado para el arrendamiento con exclusi\u00F3n de las pr\u00F3rrogas legales y t\u00E1citas. Ser\u00E1, l\u00F3gicamente, el convenido por las partes. En ausencia de plazo para el ejercicio de la opci\u00F3n, cualquiera de las partes pueden pedir al Juez que sea este quien lo fije. Si bien, en defecto de plazo, la Jurisprudencia suele apuntar el plazo fijado para el arrendamiento con exclusi\u00F3n de las pr\u00F3rrogas legales y t\u00E1citas. Ser\u00E1, l\u00F3gicamente, el convenido por las partes. En ausencia de plazo para el ejercicio de la opci\u00F3n, cualquiera de las partes pueden pedir al Juez que sea este quien lo fije. Si bien, en defecto de plazo, la Jurisprudencia suele apuntar el plazo fijado para el arrendamiento con exclusi\u00F3n de las pr\u00F3rrogas legales y t\u00E1citas.Basta con que el arrendatario optante, dentro del plazo estipulado, manifieste su decisi\u00F3n de llevar a cabo la compra notificando su voluntad positiva en este sentido al concedente.  sea este quien lo fije. Si bien, en defecto de plazo, la Jurisprudencia suele apuntar el plazo fijado para el arrendamiento con exclusi\u00F3n de las pr\u00F3rrogas legales y t\u00E1citas. Ser\u00E1, l\u00F3gicamente, el convenido por las partes. En ausencia de plazo para el ejercicio de la opci\u00F3n, cualquiera de las partes pueden pedir al Juez que sea este quien lo fije. Si bien, en defecto de plazo, la Jurisprudencia suele apuntar el plazo fijado para el arrendamiento con exclusi\u00F3n de las pr\u00F3rrogas legales y t\u00E1citas. Ser\u00E1, l\u00F3gicamente, el convenido por las partes. En ausencia de plazo para el ejercicio de la opci\u00F3n, cualquiera de las partes pueden pedir al Juez que sea este quien lo fije. Si bien, en defecto de plazo, la Jurisprudencia suele apuntar el plazo fijado para el arrendamiento con exclusi\u00F3n de las pr\u00F3rrogas legales y t\u00E1citas.Basta con que el arrendatario optante, dentro del plazo estipulado, manifieste su decisi\\u00F3n de llevar a cabo la compra notificando su voluntad positiva en este sentido al concedente.  ");
-		//txtpnBastaConQue.setBounds(10, 94, 501, 278);
-		JScrollPane barra= new JScrollPane(txtpnBastaConQue);
-		barra.setBounds(31, 95, 484, 276);
-		contentPane.add(barra);
+		JTextPane txtpnAaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa = new JTextPane();
+		txtpnAaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.setText("Este m\u00F3dulo le permitir\u00E1 a\u00F1adir un m\u00F3dulo texto de gran tama\u00F1o. Este m\u00F3dulo ocupar\u00E1 dos columnas. Usted puede utilizar este m\u00F3dulo para los textos de presentaci\u00F3n, art\u00EDculos y textos largos.Para a\u00F1adir un m\u00F3dulo Texto grande a su sitio, vaya al icono A\u00F1adir un m\u00F3dulo, situado en la barra de herramientas del editor, y haga clic en el icono Texto grande.Este m\u00F3dulo le permitir\u00E1 a\u00F1adir un m\u00F3dulo texto de gran tama\u00F1o. Este m\u00F3dulo ocupar\u00E1 dos columnas. Usted puede utilizar este m\u00F3dulo para los textos de presentaci\u00F3n, art\u00EDculos y textos largos.Para a\u00F1adir un m\u00F3dulo Texto grande a su sitio, vaya al icono A\u00F1adir un m\u00F3dulo, situado en la barra de herramientas del editor, y haga clic en el icono Texto grande.Este m\u00F3dulo le permitir\u00E1 a\u00F1adir un m\u00F3dulo texto de gran tama\u00F1o. Este m\u00F3dulo ocupar\u00E1 dos columnas. Usted puede utilizar este m\u00F3dulo para los textos de presentaci\u00F3n, art\u00EDculos y textos largos.Para a\u00F1adir un m\u00F3dulo Texto grande a su sitio, vaya al icono A\u00F1adir un m\u00F3dulo, situado en la barra de herramientas del editor, y haga clic en el icono Texto grande.Este m\u00F3dulo le permitir\u00E1 a\u00F1adir un m\u00F3dulo texto de gran tama\u00F1o. Este m\u00F3dulo ocupar\u00E1 dos columnas. Usted puede utilizar este m\u00F3dulo para los textos de presentaci\u00F3n, art\u00EDculos y textos largos.Para a\u00F1adir un m\u00F3dulo Texto grande a su sitio, vaya al icono A\u00F1adir un m\u00F3dulo, situado en la barra de herramientas del editor, y haga clic en el icono Texto grande.Este m\u00F3dulo le permitir\u00E1 a\u00F1adir un m\u00F3dulo texto de gran tama\u00F1o. Este m\u00F3dulo ocupar\u00E1 dos columnas. Usted puede utilizar este m\u00F3dulo para los textos de presentaci\u00F3n, art\u00EDculos y textos largos.Para a\u00F1adir un m\u00F3dulo Texto grande a su sitio, vaya al icono A\u00F1adir un m\u00F3dulo, situado en la barra de herramientas del editor, y haga clic en el icono Texto grande.Este m\u00F3dulo le permitir\u00E1 a\u00F1adir un m\u00F3dulo texto de gran tama\u00F1o. Este m\u00F3dulo ocupar\u00E1 dos columnas. Usted puede utilizar este m\u00F3dulo para los textos de presentaci\u00F3n, art\u00EDculos y textos largos.Para a\u00F1adir un m\u00F3dulo Texto grande a su sitio, vaya al icono A\u00F1adir un m\u00F3dulo, situado en la barra de herramientas del editor, y haga clic en el icono Texto grande.Este m\u00F3dulo le permitir\u00E1 a\u00F1adir un m\u00F3dulo texto de gran tama\u00F1o. Este m\u00F3dulo ocupar\u00E1 dos columnas. Usted puede utilizar este m\u00F3dulo para los textos de presentaci\u00F3n, art\u00EDculos y textos largos.Para a\u00F1adir un m\u00F3dulo Texto grande a su sitio, vaya al icono A\u00F1adir un m\u00F3dulo, situado en la barra de herramientas del editor, y haga clic en el icono Texto grande.Este m\u00F3dulo le permitir\u00E1 a\u00F1adir un m\u00F3dulo texto de gran tama\u00F1o. Este m\u00F3dulo ocupar\u00E1 dos columnas. Usted puede utilizar este m\u00F3dulo para los textos de presentaci\u00F3n, art\u00EDculos y textos largos.Para a\u00F1adir un m\u00F3dulo Texto grande a su sitio, vaya al icono A\u00F1adir un m\u00F3dulo, situado en la barra de herramientas del editor, y haga clic en el icono Texto grande.Este m\u00F3dulo le permitir\u00E1 a\u00F1adir un m\u00F3dulo texto de gran tama\u00F1o. Este m\u00F3dulo ocupar\u00E1 dos columnas. Usted puede utilizar este m\u00F3dulo para los textos de presentaci\u00F3n, art\u00EDculos y textos largos.Para a\u00F1adir un m\u00F3dulo Texto grande a su sitio, vaya al icono A\u00F1adir un m\u00F3dulo, situado en la barra de herramientas del editor, y haga clic en el icono Texto grande.Este m\u00F3dulo le permitir\u00E1 a\u00F1adir un m\u00F3dulo texto de gran tama\u00F1o. Este m\u00F3dulo ocupar\u00E1 dos columnas. Usted puede utilizar este m\u00F3dulo para los textos de presentaci\u00F3n, art\u00EDculos y textos largos.Para a\u00F1adir un m\u00F3dulo Texto grande a su sitio, vaya al icono A\u00F1adir un m\u00F3dulo, situado en la barra de herramientas del editor, y haga clic en el icono Texto grande.");
+		scrollPane.setViewportView(txtpnAaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa);
 	
 	}
 }
