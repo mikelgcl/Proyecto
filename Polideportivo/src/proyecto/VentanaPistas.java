@@ -43,7 +43,7 @@ public class VentanaPistas extends JFrame {
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
-		JButton btnNewButton = new JButton("<<<");
+		JButton btnNewButton = new JButton("Atrás");
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				VentanaOpcion nuevaVentana = new VentanaOpcion(); 
@@ -112,7 +112,6 @@ public class VentanaPistas extends JFrame {
 				VentanaPistas.this.dispose();
 			}
 		});
-		btnTenis.setIcon(new ImageIcon("C:\\Users\\Mikel\\Documents\\tenis.png"));
 		btnTenis.setBounds(222, 265, 98, 98);
 		contentPane.add(btnTenis);
 		

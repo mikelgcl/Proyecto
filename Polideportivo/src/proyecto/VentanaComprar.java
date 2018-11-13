@@ -6,6 +6,9 @@ import java.awt.EventQueue;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
+
+import images.I;
+
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
@@ -46,7 +49,7 @@ public class VentanaComprar extends JFrame {
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
-		JButton button = new JButton("<<<");
+		JButton button = new JButton("Atrás");
 		button.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				VentanaOpcion nuevaVentana = new VentanaOpcion();
@@ -54,7 +57,7 @@ public class VentanaComprar extends JFrame {
 				VentanaComprar.this.dispose();
 			}
 		});
-		button.setBounds(10, 11, 55, 39);
+		button.setBounds(10, 11, 71, 39);
 		contentPane.add(button);
 		
 		JButton btnRaquetaTenis = new JButton("Raqueta tenis");
@@ -94,22 +97,22 @@ public class VentanaComprar extends JFrame {
 		contentPane.add(btnBalnBaloncesto);
 		
 		JLabel lblNewLabel = new JLabel("     Precio /n foto /n Desc");
-		lblNewLabel.setIcon(new ImageIcon("C:\\Users\\Mikel\\git\\polideportivo2\\Polideportivo\\images\\raket (2).jpg"));
+		lblNewLabel.setIcon(new ImageIcon(I.class.getResource("raket (2).jpg")));
 		lblNewLabel.setBounds(65, 74, 138, 99);
 		contentPane.add(lblNewLabel);
 		
 		JLabel label = new JLabel("     Precio /n foto /n Desc");
-		label.setIcon(new ImageIcon("C:\\Users\\Mikel\\git\\polideportivo2\\Polideportivo\\images\\pala-padel-enebe-rsx-carbon-evo (2).jpg"));
+		label.setIcon(new ImageIcon(I.class.getResource("pala-padel-enebe-rsx-carbon-evo (2).jpg")));
 		label.setBounds(351, 74, 138, 99);
 		contentPane.add(label);
 		
 		JLabel label_1 = new JLabel("     Precio /n foto /n Desc");
-		label_1.setIcon(new ImageIcon("C:\\Users\\Mikel\\git\\polideportivo2\\Polideportivo\\images\\1441988783_165642_1442161238_sumario_normal (1).jpg"));
+		label_1.setIcon(new ImageIcon(I.class.getResource("1441988783_165642_1442161238_sumario_normal (1).jpg")));
 		label_1.setBounds(65, 229, 138, 99);
 		contentPane.add(label_1);
 		
 		JLabel label_2 = new JLabel("     Precio /n foto /n Desc");
-		label_2.setIcon(new ImageIcon("C:\\Users\\Mikel\\git\\polideportivo2\\Polideportivo\\images\\20171127140647-18041-web (1).jpg"));
+		label_2.setIcon(new ImageIcon(I.class.getResource("20171127140647-18041-web (1).jpg")));
 		label_2.setBounds(351, 229, 138, 99);
 		contentPane.add(label_2);
 	}
