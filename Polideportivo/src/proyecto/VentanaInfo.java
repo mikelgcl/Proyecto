@@ -89,6 +89,7 @@ public class VentanaInfo extends JFrame {
 		btnNewButton.setBackground(SystemColor.textHighlight);
 		btnNewButton.setBounds(0, 0, 539, 85);
 		contentPane.add(btnNewButton);
+		setLocationRelativeTo(null);
 	
 	}
 }
