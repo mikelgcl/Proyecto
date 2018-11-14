@@ -175,5 +175,7 @@ public class VentanaNUsu extends JFrame {
 		btnNewButton.setEnabled(false);
 		btnNewButton.setBounds(0, 0, 350, 93);
 		contentPane.add(btnNewButton);
+		setLocationRelativeTo(null);
+		
 	}
 }

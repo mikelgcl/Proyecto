@@ -11,6 +11,7 @@ import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import javax.swing.JLabel;
 import java.awt.Font;
+import java.awt.SystemColor;
 
 public class VentanaOpcion extends JFrame {
 
@@ -37,7 +38,7 @@ public class VentanaOpcion extends JFrame {
 	 */
 	public VentanaOpcion() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 555, 436);
+		setBounds(100, 100, 468, 341);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
@@ -51,7 +52,13 @@ public class VentanaOpcion extends JFrame {
 				VentanaOpcion.this.dispose();
 			}
 		});
-		btnNewButton.setBounds(23, 166, 132, 115);
+		
+		JLabel lblElijeUnaOperacin = new JLabel("Elije una operaci\u00F3n");
+		lblElijeUnaOperacin.setForeground(SystemColor.window);
+		lblElijeUnaOperacin.setFont(new Font("Tahoma", Font.PLAIN, 40));
+		lblElijeUnaOperacin.setBounds(26, 31, 339, 37);
+		contentPane.add(lblElijeUnaOperacin);
+		btnNewButton.setBounds(10, 140, 132, 115);
 		contentPane.add(btnNewButton);
 		
 		JButton btnComprarProductos = new JButton("Alquilar producto");
@@ -62,7 +69,7 @@ public class VentanaOpcion extends JFrame {
 				VentanaOpcion.this.dispose();
 			}
 		});
-		btnComprarProductos.setBounds(189, 166, 149, 115);
+		btnComprarProductos.setBounds(152, 140, 149, 115);
 		contentPane.add(btnComprarProductos);
 		
 		JButton btnDarDeAlta = new JButton("Informaci\u00F3n");
@@ -73,13 +80,15 @@ public class VentanaOpcion extends JFrame {
 				VentanaOpcion.this.dispose();
 			}
 		});
-		btnDarDeAlta.setBounds(375, 166, 132, 115);
+		btnDarDeAlta.setBounds(311, 140, 132, 115);
 		contentPane.add(btnDarDeAlta);
 		
-		JLabel lblElijeUnaOperacin = new JLabel("Elije una operaci\u00F3n");
-		lblElijeUnaOperacin.setFont(new Font("Tahoma", Font.PLAIN, 30));
-		lblElijeUnaOperacin.setBounds(23, 25, 339, 37);
-		contentPane.add(lblElijeUnaOperacin);
+		JButton btnNewButton_1 = new JButton("");
+		btnNewButton_1.setEnabled(false);
+		btnNewButton_1.setBackground(SystemColor.textHighlight);
+		btnNewButton_1.setBounds(0, 0, 452, 96);
+		contentPane.add(btnNewButton_1);
+		setLocationRelativeTo(null);
 	}
 
 }

@@ -22,6 +22,7 @@ import java.awt.SystemColor;
 import java.awt.Color;
 import java.awt.Canvas;
 import javax.swing.UIManager;
+import javax.swing.ImageIcon;
 
 public class VentanaInicio extends JFrame {
 
@@ -62,7 +63,7 @@ public class VentanaInicio extends JFrame {
 		JLabel lblPolideportivoDeusto_1 = new JLabel("Polideportivo Deusto");
 		lblPolideportivoDeusto_1.setForeground(Color.WHITE);
 		lblPolideportivoDeusto_1.setFont(new Font("Tahoma", Font.BOLD, 25));
-		lblPolideportivoDeusto_1.setBounds(38, 11, 406, 75);
+		lblPolideportivoDeusto_1.setBounds(28, 11, 406, 75);
 		contentPane.add(lblPolideportivoDeusto_1);
 		
 		JButton lblPolideportivoDeusto = new JButton("");
@@ -138,6 +139,7 @@ public class VentanaInicio extends JFrame {
 		
 		// Carga de usuario
 		usuarios = BDatos.cargar();
+		setLocationRelativeTo(null);
 		
 		//Hora
 		/*Calendar calendario = new GregorianCalendar();
