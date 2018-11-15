@@ -6,12 +6,12 @@ public class Usuario {
 	private String contrasenya;
 	private String dni;
 	private String correo;
-	private long numtar;
-	private int contar;
-	private long cadtar;
+	private String numtar;
+	private String contar;
+	private String cadtar;
 	
 	//Constructor
-	public Usuario(String nombre, String contrasenya, String dni, String correo, long numtar, int contar, long cadtar) {
+	public Usuario(String nombre, String contrasenya, String dni, String correo, String numtar, String contar, String cadtar) {
 		super();
 		this.nombre = nombre;
 		this.contrasenya = contrasenya;
@@ -21,6 +21,8 @@ public class Usuario {
 		this.contar = contar;
 		this.cadtar = cadtar;
 	}
+
+
 
 	//Getters y Setters
 	public String getDni() {
@@ -43,32 +45,32 @@ public class Usuario {
 	}
 
 
-	public long getNumtar() {
+	public String getNumtar() {
 		return numtar;
 	}
 
 
-	public void setNumtar(long numtar) {
+	public void setNumtar(String numtar) {
 		this.numtar = numtar;
 	}
 
 
-	public int getContar() {
+	public String getContar() {
 		return contar;
 	}
 
 
-	public void setContar(int contar) {
+	public void setContar(String contar) {
 		this.contar = contar;
 	}
 
 
-	public long getCadtar() {
+	public String getCadtar() {
 		return cadtar;
 	}
 
 
-	public void setCadtar(long cadtar) {
+	public void setCadtar(String cadtar) {
 		this.cadtar = cadtar;
 	}
 	

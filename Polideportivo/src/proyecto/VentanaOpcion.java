@@ -12,6 +12,7 @@ import java.awt.event.ActionEvent;
 import javax.swing.JLabel;
 import java.awt.Font;
 import java.awt.SystemColor;
+import javax.swing.UIManager;
 
 public class VentanaOpcion extends JFrame {
 
@@ -38,13 +39,14 @@ public class VentanaOpcion extends JFrame {
 	 */
 	public VentanaOpcion() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 468, 341);
+		setBounds(100, 100, 540, 316);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
 		JButton btnNewButton = new JButton("Reserva");
+		btnNewButton.setBackground(UIManager.getColor("Button.background"));
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				VentanaPistas nuevaVentana = new VentanaPistas(); 
@@ -56,12 +58,13 @@ public class VentanaOpcion extends JFrame {
 		JLabel lblElijeUnaOperacin = new JLabel("Elije una operaci\u00F3n");
 		lblElijeUnaOperacin.setForeground(SystemColor.window);
 		lblElijeUnaOperacin.setFont(new Font("Tahoma", Font.PLAIN, 40));
-		lblElijeUnaOperacin.setBounds(26, 31, 339, 37);
+		lblElijeUnaOperacin.setBounds(35, 11, 356, 69);
 		contentPane.add(lblElijeUnaOperacin);
-		btnNewButton.setBounds(10, 140, 132, 115);
+		btnNewButton.setBounds(35, 128, 131, 115);
 		contentPane.add(btnNewButton);
 		
 		JButton btnComprarProductos = new JButton("Alquilar producto");
+		btnComprarProductos.setBackground(UIManager.getColor("Button.background"));
 		btnComprarProductos.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				VentanaComprar nuevaVentana = new VentanaComprar();
@@ -69,10 +72,11 @@ public class VentanaOpcion extends JFrame {
 				VentanaOpcion.this.dispose();
 			}
 		});
-		btnComprarProductos.setBounds(152, 140, 149, 115);
+		btnComprarProductos.setBounds(190, 128, 138, 115);
 		contentPane.add(btnComprarProductos);
 		
 		JButton btnDarDeAlta = new JButton("Informaci\u00F3n");
+		btnDarDeAlta.setBackground(UIManager.getColor("Button.background"));
 		btnDarDeAlta.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				VentanaInfo nuevaVentana = new VentanaInfo();
@@ -80,13 +84,13 @@ public class VentanaOpcion extends JFrame {
 				VentanaOpcion.this.dispose();
 			}
 		});
-		btnDarDeAlta.setBounds(311, 140, 132, 115);
+		btnDarDeAlta.setBounds(353, 128, 134, 115);
 		contentPane.add(btnDarDeAlta);
 		
 		JButton btnNewButton_1 = new JButton("");
 		btnNewButton_1.setEnabled(false);
 		btnNewButton_1.setBackground(SystemColor.textHighlight);
-		btnNewButton_1.setBounds(0, 0, 452, 96);
+		btnNewButton_1.setBounds(0, 0, 524, 96);
 		contentPane.add(btnNewButton_1);
 		setLocationRelativeTo(null);
 	}

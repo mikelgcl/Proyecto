@@ -11,6 +11,9 @@ import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import javax.swing.ImageIcon;
+import java.awt.SystemColor;
+import javax.swing.JLabel;
+import java.awt.Font;
 
 public class VentanaPistas extends JFrame {
 
@@ -37,13 +40,15 @@ public class VentanaPistas extends JFrame {
 	 */
 	public VentanaPistas() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 555, 436);
+		setBounds(100, 100, 392, 416);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
 		JButton btnNewButton = new JButton("Atrás");
+		btnNewButton.setBackground(SystemColor.textHighlight);
+		btnNewButton.setForeground(SystemColor.window);
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				VentanaOpcion nuevaVentana = new VentanaOpcion(); 
@@ -51,7 +56,13 @@ public class VentanaPistas extends JFrame {
 				VentanaPistas.this.dispose();
 			}
 		});
-		btnNewButton.setBounds(10, 11, 55, 39);
+		
+		JLabel lblNewLabel = new JLabel("Reserva de pistas");
+		lblNewLabel.setFont(new Font("Tahoma", Font.PLAIN, 39));
+		lblNewLabel.setForeground(SystemColor.window);
+		lblNewLabel.setBounds(21, 11, 326, 77);
+		contentPane.add(lblNewLabel);
+		btnNewButton.setBounds(10, 343, 98, 23);
 		contentPane.add(btnNewButton);
 		
 		JButton btnNewButton_1 = new JButton("Baloncesto");
@@ -63,7 +74,7 @@ public class VentanaPistas extends JFrame {
 			}
 		});
 		btnNewButton_1.setIcon(new ImageIcon("C:\\Users\\Mikel\\Documents\\balon.png"));
-		btnNewButton_1.setBounds(58, 109, 98, 98);
+		btnNewButton_1.setBounds(10, 109, 104, 98);
 		contentPane.add(btnNewButton_1);
 		
 		JButton btnFtbol = new JButton("F\u00FAtbol");
@@ -76,7 +87,7 @@ public class VentanaPistas extends JFrame {
 			}
 		});
 		btnFtbol.setIcon(new ImageIcon("C:\\Users\\Mikel\\Downloads\\icons8-f\u00FAtbol-100.png"));
-		btnFtbol.setBounds(222, 109, 98, 98);
+		btnFtbol.setBounds(136, 109, 104, 98);
 		contentPane.add(btnFtbol);
 		
 		JButton btnFutbol = new JButton("Tenis 1");
@@ -88,7 +99,7 @@ public class VentanaPistas extends JFrame {
 			}
 		});
 		btnFutbol.setIcon(new ImageIcon("C:\\Users\\Mikel\\Downloads\\icons8-jugador-de-f\u00FAtbol-americano-100.png"));
-		btnFutbol.setBounds(384, 109, 98, 98);
+		btnFutbol.setBounds(262, 109, 104, 98);
 		contentPane.add(btnFutbol);
 		
 		JButton btnAtletismo = new JButton("P\u00E1del 2");
@@ -101,7 +112,7 @@ public class VentanaPistas extends JFrame {
 			}
 		});
 		btnAtletismo.setIcon(new ImageIcon("C:\\Users\\Mikel\\Documents\\pole-vault.png"));
-		btnAtletismo.setBounds(384, 265, 98, 98);
+		btnAtletismo.setBounds(262, 232, 104, 98);
 		contentPane.add(btnAtletismo);
 		
 		JButton btnTenis = new JButton("P\u00E1del 1");
@@ -112,7 +123,7 @@ public class VentanaPistas extends JFrame {
 				VentanaPistas.this.dispose();
 			}
 		});
-		btnTenis.setBounds(222, 265, 98, 98);
+		btnTenis.setBounds(136, 232, 104, 98);
 		contentPane.add(btnTenis);
 		
 		JButton btnPadel = new JButton("Tenis 2");
@@ -124,8 +135,15 @@ public class VentanaPistas extends JFrame {
 			}
 		});
 		btnPadel.setIcon(new ImageIcon("C:\\Users\\Mikel\\Documents\\cycling-road.png"));
-		btnPadel.setBounds(58, 265, 98, 98);
+		btnPadel.setBounds(10, 232, 104, 98);
 		contentPane.add(btnPadel);
+		
+		JButton btnNewButton_2 = new JButton("");
+		btnNewButton_2.setBackground(SystemColor.textHighlight);
+		btnNewButton_2.setEnabled(false);
+		btnNewButton_2.setBounds(0, 0, 376, 98);
+		contentPane.add(btnNewButton_2);
+		setLocationRelativeTo(null);
 	}
 
 }

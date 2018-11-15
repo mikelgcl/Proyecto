@@ -111,23 +111,17 @@ public class VentanaNUsu extends JFrame {
 				String con = textContrasenya.getText();
 				String dnia = textDNI.getText();
 				String cor = textCorreo.getText();
-				long num = 0;
-				int numc =0;
-				long fecha = 0;
+				String num = textNum.getText();
+				String numc = textSecret.getText();
+				String fecha = textCad.getText();
 				
-				try {
-					 num = (long)Integer.parseInt(textNum.getText());
-					 numc = Integer.parseInt(textSecret.getText());
-					 fecha = (long)Integer.parseInt(textCad.getText());
-					
-				} catch (NumberFormatException n) {
-					System.out.println("Ha habido un error");
-				}
+				
 				
 				Usuario usua = new Usuario(nom, con, dnia, cor, num, numc, fecha);
 				System.out.println(usua);
+				BDatos.nuevoUsuario(usua);
 				
-				System.out.println("");
+			
 				
 				VentanaInicio nuevaVentana = new VentanaInicio(); 
 				nuevaVentana.setVisible(true);
