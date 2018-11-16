@@ -107,13 +107,57 @@ public class VentanaNUsu extends JFrame {
 			public void actionPerformed(ActionEvent arg0) {
 				
 				//Crear el nuevo usuario
-				String nom = textNombre.getText();
-				String con = textContrasenya.getText();
-				String dnia = textDNI.getText();
-				String cor = textCorreo.getText();
-				String num = textNum.getText();
-				String numc = textSecret.getText();
-				String fecha = textCad.getText();
+				String dnia="";
+				String numc="";
+				String fecha="";
+				String cor="";
+				String nom="";
+				String con="";
+				String num="";
+				
+				if (nom.length()<=20) {
+					nom = textNombre.getText();
+				} else {
+					JOptionPane.showInputDialog("Nombre inferior a 20 caracteres");
+				}
+			 
+				if (con.length()<=45) {
+				 con = textContrasenya.getText();
+				} else {
+					JOptionPane.showInputDialog("Contraseña inferior a 45");
+				}
+				
+				if(dnia.length()<=10) {
+				  dnia = textDNI.getText();
+				}else {
+					JOptionPane.showInputDialog("Dni inferior a 10 caracteres");
+				}
+				
+				if (cor.length()<=45) {
+					 cor = textCorreo.getText();
+				}else {
+					JOptionPane.showInputDialog("Correo inferior a 40 caracteres");
+				}
+				
+				if (num.length()<=16) {
+					num = textNum.getText();
+				} else {
+					JOptionPane.showInputDialog("NUmero inferior a 16 digitos");
+				}
+				
+				
+				if (numc.length()<=3) {
+				numc = textSecret.getText();
+				}else {
+					JOptionPane.showInputDialog("Fecha inferior a 999");
+				}
+				
+				if (Integer.parseInt(fecha)<=311299) {
+					 fecha = textCad.getText();
+				}else {
+					JOptionPane.showInputDialog("Fecha inferior a 311299");
+				}
+				
 				
 				
 				
