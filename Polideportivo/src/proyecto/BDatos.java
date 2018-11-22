@@ -25,7 +25,7 @@ public class BDatos {
 
 			while (rs.next()) {
 				
-				Usuario e = new Usuario(rs.getString("nombre"), rs.getString("contrasenya"), rs.getString("dni"), rs.getString("correo"), rs.getString("num_tarjeta"), rs.getString("con_tarjeta"), rs.getString("fecha_tarjeta"));
+				Usuario e = new Usuario(rs.getString("nombre"), rs.getString("contrasenya"), rs.getString("dni"), rs.getString("correo"), rs.getString("num_tarjeta"), rs.getString("con_tarjeta"), rs.getString("fecha_tarjeta"), rs.getString("dinero"));
 				usu.add(e);
 
 			}
@@ -46,7 +46,7 @@ public class BDatos {
 		ArrayList<Usuario> usu = new ArrayList<>();
 		try {
 			con = DriverManager.getConnection(sURL, "root", "Olatz123gc");
-			System.out.println("Conexión establecida");
+			//System.out.println("Conexión establecida");
 		} catch (SQLException e) {
 			System.out.println("Conexión no establecida, error");
 
@@ -55,7 +55,7 @@ public class BDatos {
 		//Crear el statement y añadir usuario a la base de datos
 		
 		try {
-			PreparedStatement stmt = con.prepareStatement("INSERT INTO usuario VALUES (?,?,?,?,?,?,?)");
+			PreparedStatement stmt = con.prepareStatement("INSERT INTO usuario VALUES (?,?,?,?,?,?,?,?)");
 			String nom2 = usua.getNombre();
 			String con2 = usua.getContrasenya();
 			String dni2= usua.getDni();
@@ -63,6 +63,7 @@ public class BDatos {
 			String numt2= usua.getNumtar();
 			String ctar2= usua.getContar();
 			String ftar2= usua.getCadtar();
+			String dinero2 = usua.getDinero();
 			 
 			stmt.setString(1,nom2);
 			stmt.setString(2,con2);
@@ -71,6 +72,7 @@ public class BDatos {
 			stmt.setString(5,numt2);
 			stmt.setString(6,ctar2);
 			stmt.setString(7,ftar2);
+			stmt.setString(8, dinero2);
 			
 			// execute insert SQL stetement
             stmt.executeUpdate();
@@ -78,7 +80,7 @@ public class BDatos {
             System.out.println("Se ha añadido a la base de datos :)");
 			
 		} catch (Exception e) {
-			System.out.println("Error al guardar usuario");
+			System.out.println("Error al guardar usuario: "+e.getMessage());
 		}
 		
 		

@@ -9,9 +9,10 @@ public class Usuario {
 	private String numtar;
 	private String contar;
 	private String cadtar;
+	private String dinero;
 	
 	//Constructor
-	public Usuario(String nombre, String contrasenya, String dni, String correo, String numtar, String contar, String cadtar) {
+	public Usuario(String nombre, String contrasenya, String dni, String correo, String numtar, String contar, String cadtar, String dinero) {
 		super();
 		this.nombre = nombre;
 		this.contrasenya = contrasenya;
@@ -20,6 +21,7 @@ public class Usuario {
 		this.numtar = numtar;
 		this.contar = contar;
 		this.cadtar = cadtar;
+		this.dinero = dinero;
 	}
 
 
@@ -87,8 +89,16 @@ public class Usuario {
 		return contrasenya;
 	}
 
-	public void setContrasenya(String contrasenya) {
+	public void setContrasenya(String dinero) {
 		this.contrasenya = contrasenya;
+	}
+	
+	public String getDinero() {
+		return dinero;
+	}
+
+	public void setDinero(String dinero) {
+		this.dinero = dinero;
 	}
 
 	//To String

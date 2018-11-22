@@ -114,6 +114,7 @@ public class VentanaNUsu extends JFrame {
 				String nom="";
 				String con="";
 				String num="";
+				String din="";
 				
 				if (textNombre.getText().length()<=20) {
 					nom = textNombre.getText();
@@ -164,10 +165,10 @@ public class VentanaNUsu extends JFrame {
 					
 				}
 				
+				din = "500";
 				
 				
-				
-				Usuario usua = new Usuario(nom, con, dnia, cor, num, numc, fecha);
+				Usuario usua = new Usuario(nom, con, dnia, cor, num, numc, fecha, din);
 				System.out.println(usua);
 				BDatos.nuevoUsuario(usua);
 				
