@@ -116,7 +116,7 @@ public class VentanaInicio extends JFrame {
 		contentPane.add(textContraseña);
 		
 		JButton btnNuevoUsuario = new JButton("Nuevo Usuario");
-		btnNuevoUsuario.setFont(new Font("Tahoma", Font.PLAIN, 11));
+		btnNuevoUsuario.setFont(new Font("Tahoma", Font.BOLD, 11));
 		btnNuevoUsuario.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				

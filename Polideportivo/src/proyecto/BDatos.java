@@ -9,7 +9,7 @@ public class BDatos {
 	public static  ArrayList<Usuario> cargar() {
 		//Conectar
 		Connection con = null;
-		String sURL = "jdbc:mysql://localhost:3306/bdpolideportivo";
+		String sURL = "jdbc:mysql://127.0.0.1:3306/bdpolideportivo";
 		ArrayList<Usuario> usu = new ArrayList<>();
 		try {
 			con = DriverManager.getConnection(sURL, "root", "Olatz123gc");
@@ -42,7 +42,7 @@ public class BDatos {
 	public static void nuevoUsuario(Usuario usua) {
 		//Conectar
 		Connection con = null;
-		String sURL = "jdbc:mysql://localhost:3306/bdpolideportivo";
+		String sURL = "jdbc:mysql://127.0.0.1:3306/bdpolideportivo";
 		ArrayList<Usuario> usu = new ArrayList<>();
 		try {
 			con = DriverManager.getConnection(sURL, "root", "Olatz123gc");
@@ -59,10 +59,10 @@ public class BDatos {
 			String nom2 = usua.getNombre();
 			String con2 = usua.getContrasenya();
 			String dni2= usua.getDni();
-			String cor2= usua.getDni();
-			String numt2= usua.getDni();
-			String ctar2= usua.getDni();
-			String ftar2= usua.getDni();
+			String cor2= usua.getCorreo();
+			String numt2= usua.getNumtar();
+			String ctar2= usua.getContar();
+			String ftar2= usua.getCadtar();
 			 
 			stmt.setString(1,nom2);
 			stmt.setString(2,con2);
@@ -78,7 +78,7 @@ public class BDatos {
             System.out.println("Se ha añadido a la base de datos :)");
 			
 		} catch (Exception e) {
-			System.out.println("Ha habido un error al insertar el dato en la base de datos");
+			System.out.println("Error al guardar usuario");
 		}
 		
 		

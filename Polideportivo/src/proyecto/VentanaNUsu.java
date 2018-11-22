@@ -115,47 +115,53 @@ public class VentanaNUsu extends JFrame {
 				String con="";
 				String num="";
 				
-				if (nom.length()<=20) {
+				if (textNombre.getText().length()<=20) {
 					nom = textNombre.getText();
 				} else {
-					JOptionPane.showInputDialog("Nombre inferior a 20 caracteres");
+					JOptionPane.showMessageDialog(btnCrearUsuario, "Nombre inferior a 20 caracteres");
+					
 				}
 			 
-				if (con.length()<=45) {
+				if (textContrasenya.getText().length()<=45) {
 				 con = textContrasenya.getText();
 				} else {
-					JOptionPane.showInputDialog("Contraseña inferior a 45");
+					JOptionPane.showMessageDialog(btnCrearUsuario, "Contraseña inferior a 45");
+					
 				}
 				
-				if(dnia.length()<=10) {
+				if(textDNI.getText().length()<=10) {
 				  dnia = textDNI.getText();
 				}else {
-					JOptionPane.showInputDialog("Dni inferior a 10 caracteres");
+					JOptionPane.showMessageDialog(btnCrearUsuario, "Dni inferior a 10 caracteres");
+					
 				}
 				
-				if (cor.length()<=45) {
+				if (textCorreo.getText().length()<=45) {
 					 cor = textCorreo.getText();
 				}else {
-					JOptionPane.showInputDialog("Correo inferior a 40 caracteres");
+					JOptionPane.showMessageDialog(btnCrearUsuario, "Correo inferior a 40 caracteres");
+					
 				}
 				
-				if (num.length()<=16) {
+				if (textNum.getText().length()<=16) {
 					num = textNum.getText();
 				} else {
-					JOptionPane.showInputDialog("NUmero inferior a 16 digitos");
+					JOptionPane.showMessageDialog(btnCrearUsuario, "Número de 16 digitos");
+					
 				}
 				
 				
-				if (numc.length()<=3) {
+				if (textSecret.getText().length()==3) {
 				numc = textSecret.getText();
 				}else {
-					JOptionPane.showInputDialog("Fecha inferior a 999");
+					JOptionPane.showMessageDialog(btnCrearUsuario, "Contraseña de tres números");
 				}
 				
-				if (Integer.parseInt(fecha)<=311299) {
-					 fecha = textCad.getText();
-				}else {
-					JOptionPane.showInputDialog("Fecha inferior a 311299");
+				if (textCad.getText().length() == 6 ) {
+					fecha = textCad.getText();
+				} else {
+					JOptionPane.showMessageDialog(btnCrearUsuario, "Seis números por favor");
+					
 				}
 				
 				
