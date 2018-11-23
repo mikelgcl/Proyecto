@@ -84,6 +84,37 @@ public class BDatos {
 		}
 		
 		
+		
+	}
+	
+	
+	//Alquilar producto
+	public static void alquilarProducto(Producto prod) {
+		//Conectar
+		Connection con = null;
+		String sURL = "jdbc:mysql://127.0.0.1:3306/bdpolideportivo";
+		ArrayList<Usuario> usu = new ArrayList<>();
+		try {
+			con = DriverManager.getConnection(sURL, "root", "Olatz123gc");
+			//System.out.println("Conexión establecida");
+		} catch (SQLException e) {
+			System.out.println("Conexión no establecida, error");
+
+		}
+		
+		//Restar dinero a la cuenta
+		try {
+			PreparedStatement stmt = con.prepareStatement("INSERT INTO usuario VALUES (?,?,?,?,?,?,?,?)");
+			
+			
+			// execute insert SQL stetement
+            stmt.executeUpdate();
+
+            System.out.println("Se ha alquilado correctamente :)");
+			
+		} catch (Exception e) {
+			System.out.println("Error al guardar usuario: "+e.getMessage());
+		}
 	}
 
 }

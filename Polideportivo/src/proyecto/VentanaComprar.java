@@ -45,7 +45,7 @@ public class VentanaComprar extends JFrame {
 	 */
 	public VentanaComprar() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 417, 458);
+		setBounds(100, 100, 417, 497);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
@@ -67,7 +67,7 @@ public class VentanaComprar extends JFrame {
 		lblNewLabel_1.setFont(new Font("Tahoma", Font.PLAIN, 35));
 		lblNewLabel_1.setBounds(29, 11, 406, 61);
 		contentPane.add(lblNewLabel_1);
-		button.setBounds(29, 385, 80, 23);
+		button.setBounds(29, 424, 80, 23);
 		contentPane.add(button);
 		
 		JButton btnRaquetaTenis = new JButton("Raqueta tenis");
@@ -76,7 +76,7 @@ public class VentanaComprar extends JFrame {
 				JOptionPane.showMessageDialog(btnRaquetaTenis, "Raqueta de tenis alquilada correctamente", "Alquilar", 1);
 			}
 		});
-		btnRaquetaTenis.setBounds(29, 217, 138, 23);
+		btnRaquetaTenis.setBounds(29, 234, 138, 23);
 		contentPane.add(btnRaquetaTenis);
 		
 		JButton btnRaquetaPdel = new JButton("Raqueta p\u00E1del");
@@ -85,7 +85,7 @@ public class VentanaComprar extends JFrame {
 				JOptionPane.showMessageDialog(btnRaquetaTenis, "Raqueta de pádel alquilada correctamente", "Alquilar", 1);
 			}
 		});
-		btnRaquetaPdel.setBounds(229, 217, 138, 23);
+		btnRaquetaPdel.setBounds(229, 234, 138, 23);
 		contentPane.add(btnRaquetaPdel);
 		
 		JButton btnBalnFtbol = new JButton("Bal\u00F3n f\u00FAtbol");
@@ -94,7 +94,7 @@ public class VentanaComprar extends JFrame {
 				JOptionPane.showMessageDialog(btnRaquetaTenis, "Balón de fútbol alquilado correctamente", "Alquilar", 1);
 			}
 		});
-		btnBalnFtbol.setBounds(29, 351, 138, 23);
+		btnBalnFtbol.setBounds(29, 390, 138, 23);
 		contentPane.add(btnBalnFtbol);
 		
 		JButton btnBalnBaloncesto = new JButton("Bal\u00F3n baloncesto");
@@ -103,27 +103,27 @@ public class VentanaComprar extends JFrame {
 				JOptionPane.showMessageDialog(btnRaquetaTenis, "Pelota de baloncesto alquilada correctamente", "Alquilar", 1);
 			}
 		});
-		btnBalnBaloncesto.setBounds(229, 351, 138, 23);
+		btnBalnBaloncesto.setBounds(229, 390, 138, 23);
 		contentPane.add(btnBalnBaloncesto);
 		
 		JLabel lblNewLabel = new JLabel("     Precio /n foto /n Desc");
 		lblNewLabel.setIcon(new ImageIcon(I.class.getResource("raket (2).jpg")));
-		lblNewLabel.setBounds(29, 118, 138, 99);
+		lblNewLabel.setBounds(29, 105, 138, 99);
 		contentPane.add(lblNewLabel);
 		
 		JLabel label = new JLabel("     Precio /n foto /n Desc");
 		label.setIcon(new ImageIcon(I.class.getResource("pala-padel-enebe-rsx-carbon-evo (2).jpg")));
-		label.setBounds(229, 118, 138, 99);
+		label.setBounds(229, 105, 138, 99);
 		contentPane.add(label);
 		
 		JLabel label_1 = new JLabel("     Precio /n foto /n Desc");
 		label_1.setIcon(new ImageIcon(I.class.getResource("1441988783_165642_1442161238_sumario_normal (1).jpg")));
-		label_1.setBounds(29, 251, 138, 99);
+		label_1.setBounds(29, 268, 138, 99);
 		contentPane.add(label_1);
 		
 		JLabel label_2 = new JLabel("     Precio /n foto /n Desc");
 		label_2.setIcon(new ImageIcon(I.class.getResource("20171127140647-18041-web (1).jpg")));
-		label_2.setBounds(229, 251, 138, 99);
+		label_2.setBounds(229, 268, 138, 99);
 		contentPane.add(label_2);
 		
 		JButton btnNewButton = new JButton("");
@@ -131,7 +131,26 @@ public class VentanaComprar extends JFrame {
 		btnNewButton.setEnabled(false);
 		btnNewButton.setBounds(0, 0, 548, 87);
 		contentPane.add(btnNewButton);
+		
+		JLabel lblPrecio = new JLabel("Precio: 5 $");
+		lblPrecio.setFont(new Font("Tahoma", Font.BOLD, 11));
+		lblPrecio.setBounds(29, 209, 80, 23);
+		contentPane.add(lblPrecio);
+		
+		JLabel lblPrecio_1 = new JLabel("Precio: 4 $");
+		lblPrecio_1.setFont(new Font("Tahoma", Font.BOLD, 11));
+		lblPrecio_1.setBounds(229, 209, 80, 23);
+		contentPane.add(lblPrecio_1);
+		
+		JLabel lblPrecio_3 = new JLabel("Precio: 3 $");
+		lblPrecio_3.setFont(new Font("Tahoma", Font.BOLD, 11));
+		lblPrecio_3.setBounds(229, 367, 80, 23);
+		contentPane.add(lblPrecio_3);
+		
+		JLabel lblPrecio_2 = new JLabel("Precio: 4 $");
+		lblPrecio_2.setFont(new Font("Tahoma", Font.BOLD, 11));
+		lblPrecio_2.setBounds(29, 367, 80, 23);
+		contentPane.add(lblPrecio_2);
 		setLocationRelativeTo(null);
 	}
-
 }
