@@ -163,6 +163,7 @@ public class VentanaBaloncesto extends JFrame {
 		rdbtnLibre.setBounds(89, 211, 68, 23);
 		contentPane.add(rdbtnLibre);
 		
+		
 		JRadioButton rdbtnLibre_1 = new JRadioButton("Libre");
 		rdbtnLibre_1.setBounds(156, 211, 68, 23);
 		contentPane.add(rdbtnLibre_1);
@@ -183,5 +184,106 @@ public class VentanaBaloncesto extends JFrame {
 		rdbtnLibre_5.setBounds(424, 211, 68, 23);
 		contentPane.add(rdbtnLibre_5);
 		setLocationRelativeTo(null);
+		
+		
+		rdbtnNewRadioButton.addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				if(rdbtnNewRadioButton.isSelected()==true) {
+					rdbtnNewRadioButton.setText("Ocupada");
+				}else {
+					rdbtnNewRadioButton.setText("Libre");
+				}
+			
+				
+			}
+		});
+		rdbtnLibre.addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				if(rdbtnLibre.isSelected()==true) {
+					rdbtnLibre.setText("Ocupada");
+				}else {
+					rdbtnLibre.setText("Libre");
+				}
+			
+				
+			}
+		});
+		
+		rdbtnLibre_1.addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				if(rdbtnLibre_1.isSelected()==true) {
+					rdbtnLibre_1.setText("Ocupada");
+				}else {
+					rdbtnLibre_1.setText("Libre");
+				}
+			
+				
+			}
+		});
+		
+		rdbtnLibre_2.addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				if(rdbtnLibre_2.isSelected()==true) {
+					rdbtnLibre_2.setText("Ocupada");
+				}else {
+					rdbtnLibre_2.setText("Libre");
+				}
+			
+				
+			}
+		});
+		
+		rdbtnLibre_3.addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				if(rdbtnLibre_3.isSelected()==true) {
+					rdbtnLibre_3.setText("Ocupada");
+				}else {
+					rdbtnLibre_3.setText("Libre");
+				}
+			
+				
+			}
+		});
+		
+		rdbtnLibre_4.addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				if(rdbtnLibre_4.isSelected()==true) {
+					rdbtnLibre_4.setText("Ocupada");
+				}else {
+					rdbtnLibre_4.setText("Libre");
+				}
+			
+				
+			}
+		});
+		rdbtnLibre_5.addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				if(rdbtnLibre_5.isSelected()==true) {
+					rdbtnLibre_5.setText("Ocupada");
+				}else {
+					rdbtnLibre_5.setText("Libre");
+				}
+			
+				
+			}
+		});
+		
+		
+	
 	}
+	
 }
