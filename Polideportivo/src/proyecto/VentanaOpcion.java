@@ -57,8 +57,8 @@ public class VentanaOpcion extends JFrame {
 		
 		JLabel lblElijeUnaOperacin = new JLabel("Elije una operaci\u00F3n");
 		lblElijeUnaOperacin.setForeground(SystemColor.window);
-		lblElijeUnaOperacin.setFont(new Font("Tahoma", Font.PLAIN, 40));
-		lblElijeUnaOperacin.setBounds(35, 11, 356, 69);
+		lblElijeUnaOperacin.setFont(new Font("Tahoma", Font.BOLD, 40));
+		lblElijeUnaOperacin.setBounds(35, 11, 460, 69);
 		contentPane.add(lblElijeUnaOperacin);
 		btnNewButton.setBounds(35, 128, 131, 115);
 		contentPane.add(btnNewButton);

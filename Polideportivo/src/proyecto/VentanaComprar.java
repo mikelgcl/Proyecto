@@ -73,6 +73,7 @@ public class VentanaComprar extends JFrame {
 		JButton btnRaquetaTenis = new JButton("Raqueta tenis");
 		btnRaquetaTenis.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
+				BDatos.alquilarProducto(5);
 				JOptionPane.showMessageDialog(btnRaquetaTenis, "Raqueta de tenis alquilada correctamente", "Alquilar", 1);
 			}
 		});

@@ -89,7 +89,7 @@ public class BDatos {
 	
 	
 	//Alquilar producto
-	public static void alquilarProducto(Producto prod) {
+	public static void alquilarProducto(int a) {
 		//Conectar
 		Connection con = null;
 		String sURL = "jdbc:mysql://127.0.0.1:3306/bdpolideportivo";
@@ -104,7 +104,10 @@ public class BDatos {
 		
 		//Restar dinero a la cuenta
 		try {
-			PreparedStatement stmt = con.prepareStatement("INSERT INTO usuario VALUES (?,?,?,?,?,?,?,?)");
+			//System.out.println(usu.size());
+			PreparedStatement stmt = con.prepareStatement("UPDATE usuario SET dinero = dinero- "+ a +
+					"WHERE nombre = '"+ usu.get(0).getNombre() +"';");
+			
 			
 			
 			// execute insert SQL stetement
@@ -113,7 +116,7 @@ public class BDatos {
             System.out.println("Se ha alquilado correctamente :)");
 			
 		} catch (Exception e) {
-			System.out.println("Error al guardar usuario: "+e.getMessage());
+			System.out.println("Error al alquilar producto: "+e.getMessage());
 		}
 	}
 
