@@ -27,7 +27,7 @@ public class VentanaFutbol extends JFrame {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					VentanaBaloncesto frame = new VentanaBaloncesto();
+					VentanaFutbol frame = new VentanaFutbol();
 					frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
