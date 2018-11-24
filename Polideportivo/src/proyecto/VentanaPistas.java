@@ -58,9 +58,9 @@ public class VentanaPistas extends JFrame {
 		});
 		
 		JLabel lblNewLabel = new JLabel("Reserva de pistas");
-		lblNewLabel.setFont(new Font("Tahoma", Font.PLAIN, 39));
+		lblNewLabel.setFont(new Font("Tahoma", Font.BOLD, 39));
 		lblNewLabel.setForeground(SystemColor.window);
-		lblNewLabel.setBounds(21, 11, 326, 77);
+		lblNewLabel.setBounds(10, 11, 355, 77);
 		contentPane.add(lblNewLabel);
 		btnNewButton.setBounds(10, 343, 98, 23);
 		contentPane.add(btnNewButton);

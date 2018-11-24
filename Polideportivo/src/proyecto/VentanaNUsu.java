@@ -16,6 +16,7 @@ import javax.swing.JPasswordField;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import java.awt.SystemColor;
+import java.awt.Color;
 
 public class VentanaNUsu extends JFrame {
 
@@ -27,6 +28,7 @@ public class VentanaNUsu extends JFrame {
 	private JTextField textCad;
 	private JPasswordField textSecret;
 	private JPasswordField textContrasenya;
+	private boolean errores;
 
 	/**
 	 * Launch the application.
@@ -102,85 +104,7 @@ public class VentanaNUsu extends JFrame {
 		btnAtrs.setBounds(27, 395, 98, 23);
 		contentPane.add(btnAtrs);
 		
-		JButton btnCrearUsuario = new JButton("Crear usuario");
-		btnCrearUsuario.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent arg0) {
-				
-				//Crear el nuevo usuario
-				String dnia="";
-				String numc="";
-				String fecha="";
-				String cor="";
-				String nom="";
-				String con="";
-				String num="";
-				String din="";
-				
-				if (textNombre.getText().length()<=20) {
-					nom = textNombre.getText();
-				} else {
-					JOptionPane.showMessageDialog(btnCrearUsuario, "Nombre inferior a 20 caracteres");
-					
-				}
-			 
-				if (textContrasenya.getText().length()<=45) {
-				 con = textContrasenya.getText();
-				} else {
-					JOptionPane.showMessageDialog(btnCrearUsuario, "Contraseña inferior a 45");
-					
-				}
-				
-				if(textDNI.getText().length()<=10) {
-				  dnia = textDNI.getText();
-				}else {
-					JOptionPane.showMessageDialog(btnCrearUsuario, "Dni inferior a 10 caracteres");
-					
-				}
-				
-				if (textCorreo.getText().length()<=45) {
-					 cor = textCorreo.getText();
-				}else {
-					JOptionPane.showMessageDialog(btnCrearUsuario, "Correo inferior a 40 caracteres");
-					
-				}
-				
-				if (textNum.getText().length()<=16) {
-					num = textNum.getText();
-				} else {
-					JOptionPane.showMessageDialog(btnCrearUsuario, "Número de 16 digitos");
-					
-				}
-				
-				
-				if (textSecret.getText().length()==3) {
-				numc = textSecret.getText();
-				}else {
-					JOptionPane.showMessageDialog(btnCrearUsuario, "Contraseña de tres números");
-				}
-				
-				if (textCad.getText().length() == 6 ) {
-					fecha = textCad.getText();
-				} else {
-					JOptionPane.showMessageDialog(btnCrearUsuario, "Seis números por favor");
-					
-				}
-				
-				din = "500";
-				
-				
-				Usuario usua = new Usuario(nom, con, dnia, cor, num, numc, fecha, din);
-				System.out.println(usua);
-				BDatos.nuevoUsuario(usua);
-				
-			
-				
-				VentanaInicio nuevaVentana = new VentanaInicio(); 
-				nuevaVentana.setVisible(true);
-				VentanaNUsu.this.dispose();
-			}
-		});
-		btnCrearUsuario.setBounds(135, 395, 183, 23);
-		contentPane.add(btnCrearUsuario);
+		
 		
 		textNombre = new JTextField();
 		textNombre.setBounds(133, 116, 149, 20);
@@ -220,7 +144,158 @@ public class VentanaNUsu extends JFrame {
 		btnNewButton.setEnabled(false);
 		btnNewButton.setBounds(0, 0, 350, 93);
 		contentPane.add(btnNewButton);
+		
+		JLabel errorNombre = new JLabel("Entre 1 y 45 car\u00E1cteres ");
+		errorNombre.setForeground(Color.RED);
+		errorNombre.setFont(new Font("Tahoma", Font.PLAIN, 10));
+		errorNombre.setBounds(135, 102, 215, 14);
+		contentPane.add(errorNombre);
+		errorNombre.setVisible(false);
+		
+		JLabel errorContrasenya = new JLabel("Entre 1 y 45 car\u00E1cteres ");
+		errorContrasenya.setForeground(Color.RED);
+		errorContrasenya.setFont(new Font("Tahoma", Font.PLAIN, 10));
+		errorContrasenya.setBounds(135, 144, 215, 14);
+		contentPane.add(errorContrasenya);
+		errorContrasenya.setVisible(false);
+		
+		JLabel errorDni = new JLabel("10 car\u00E1cteres");
+		errorDni.setForeground(Color.RED);
+		errorDni.setFont(new Font("Tahoma", Font.PLAIN, 10));
+		errorDni.setBounds(135, 186, 215, 14);
+		contentPane.add(errorDni);
+		errorDni.setVisible(false);
+		
+		JLabel errorCorreo = new JLabel("Correo no v\u00E1lido");
+		errorCorreo.setForeground(Color.RED);
+		errorCorreo.setFont(new Font("Tahoma", Font.PLAIN, 10));
+		errorCorreo.setBounds(133, 222, 215, 14);
+		contentPane.add(errorCorreo);
+		errorCorreo.setVisible(false);
+		
+		JLabel errorNumTar = new JLabel("C\u00F3digo num\u00E9rico de 16 car\u00E1cteres");
+		errorNumTar.setForeground(Color.RED);
+		errorNumTar.setFont(new Font("Tahoma", Font.PLAIN, 10));
+		errorNumTar.setBounds(133, 259, 215, 14);
+		contentPane.add(errorNumTar);
+		errorNumTar.setVisible(false);
+		
+		JLabel errorCadTar = new JLabel("C\u00F3digo num\u00E9rico de 6 car\u00E1cteres");
+		errorCadTar.setForeground(Color.RED);
+		errorCadTar.setFont(new Font("Tahoma", Font.PLAIN, 10));
+		errorCadTar.setBounds(133, 296, 215, 23);
+		contentPane.add(errorCadTar);
+		errorCadTar.setVisible(false);
+		
+		JLabel errorNumSec = new JLabel("C\u00F3digo num\u00E9rico de 3 car\u00E1cteres");
+		errorNumSec.setForeground(Color.RED);
+		errorNumSec.setFont(new Font("Tahoma", Font.PLAIN, 10));
+		errorNumSec.setBounds(135, 333, 215, 23);
+		contentPane.add(errorNumSec);
+		errorNumSec.setVisible(false);
+		
+		JButton btnCrearUsuario = new JButton("Crear usuario");
+		btnCrearUsuario.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				
+				//Crear el nuevo usuario
+				String dnia="";
+				String numc="";
+				String fecha="";
+				String cor="";
+				String nom="";
+				String con="";
+				String num="";
+				String din="";
+				
+				if (textNombre.getText().length()<=20) {
+					nom = textNombre.getText();
+					errorNombre.setVisible(false);
+				} else {
+					errorNombre.setVisible(true);
+					
+				}
+			 
+				if (textContrasenya.getText().length()<=45) {
+				 con = textContrasenya.getText();
+				 errorContrasenya.setVisible(false);
+				} else {
+					errorContrasenya.setVisible(true);
+				}
+				
+				if(textDNI.getText().length()<=10) {
+				  dnia = textDNI.getText();
+				  errorDni.setVisible(false);
+				}else {
+					errorDni.setVisible(true);
+					
+				}
+				
+				if (textCorreo.getText().length()<=45) {
+					 cor = textCorreo.getText();
+					 errorCorreo.setVisible(false);
+				}else {
+					errorCorreo.setVisible(true);
+					
+				}
+				
+				if (textNum.getText().length()==16) {
+					num = textNum.getText();
+					errorNumTar.setVisible(false);
+				} else {
+					errorNumTar.setVisible(true);
+					
+				}
+				
+				
+				if (textSecret.getText().length()==3) {
+				numc = textSecret.getText();
+				errorNumSec.setVisible(false);
+				}else {
+					errorNumSec.setVisible(true);
+				}
+				
+				if (textCad.getText().length() == 6 ) {
+					fecha = textCad.getText();
+					errorCadTar.setVisible(false);
+				} else {
+					errorCadTar.setVisible(true);
+					
+				}
+				
+				din = "500";
+				
+				errores = false;
+				
+				
+				
+				
+				
+				//Hacer que si alguno de los errores es visible, no cree al nuevo usuario
+				
+				
+				
+				
+				
+				
+				if (errores = false) {
+					Usuario usua = new Usuario(nom, con, dnia, cor, num, numc, fecha, din);
+					System.out.println(usua);
+					BDatos.nuevoUsuario(usua);
+					
+					JOptionPane.showMessageDialog(btnCrearUsuario, "El usuario se ha creado correctamente");
+					VentanaInicio nuevaVentana = new VentanaInicio(); 
+					nuevaVentana.setVisible(true);
+					VentanaNUsu.this.dispose();
+				}
+				
+			}
+		});
+		btnCrearUsuario.setBounds(135, 395, 183, 23);
+		
+		contentPane.add(btnCrearUsuario);
 		setLocationRelativeTo(null);
+		
 		
 	}
 }
