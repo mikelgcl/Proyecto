@@ -183,6 +183,45 @@ public class VentanaBaloncesto extends JFrame {
 		JRadioButton rdbtnLibre_5 = new JRadioButton("Libre");
 		rdbtnLibre_5.setBounds(424, 211, 68, 23);
 		contentPane.add(rdbtnLibre_5);
+		
+		JButton btnNewButton_3 = new JButton("Reservar");
+		btnNewButton_3.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				if (rdbtnLibre.isSelected()) {
+					rdbtnLibre.setText("Ocupado");
+					rdbtnLibre.setEnabled(false);
+				}
+				if (rdbtnLibre_1.isSelected()) {
+					rdbtnLibre_1.setText("Ocupado");
+					rdbtnLibre_1.setEnabled(false);
+				}
+				if (rdbtnLibre_2.isSelected()) {
+					rdbtnLibre_2.setText("Ocupado");
+					rdbtnLibre_2.setEnabled(false);
+				}
+				if (rdbtnLibre_3.isSelected()) {
+					rdbtnLibre_3.setText("Ocupado");
+					rdbtnLibre_3.setEnabled(false);
+				}
+				if (rdbtnLibre_4.isSelected()) {
+					rdbtnLibre_4.setText("Ocupado");
+					rdbtnLibre_4.setEnabled(false);
+				}
+				if (rdbtnLibre_5.isSelected()) {
+					rdbtnLibre_5.setText("Ocupado");
+					rdbtnLibre_5.setEnabled(false);
+				}
+				if (rdbtnNewRadioButton.isSelected()) {
+					rdbtnNewRadioButton.setText("Ocupado");
+					rdbtnNewRadioButton.setEnabled(false);
+				}
+				
+				
+				
+			}
+		});
+		btnNewButton_3.setBounds(403, 263, 89, 23);
+		contentPane.add(btnNewButton_3);
 		setLocationRelativeTo(null);
 		
 		

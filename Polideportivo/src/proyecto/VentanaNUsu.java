@@ -278,7 +278,7 @@ public class VentanaNUsu extends JFrame {
 				
 				
 				
-				//Meter dentro de un if
+				
 					Usuario usua = new Usuario(nom, con, dnia, cor, num, numc, fecha, din);
 					System.out.println(usua);
 					BDatos.nuevoUsuario(usua);
@@ -288,9 +288,12 @@ public class VentanaNUsu extends JFrame {
 					nuevaVentana.setVisible(true);
 					VentanaNUsu.this.dispose();
 				
+					
+				
 				
 			}
 		});
+		
 		btnCrearUsuario.setBounds(135, 395, 183, 23);
 		
 		contentPane.add(btnCrearUsuario);
