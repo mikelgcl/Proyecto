@@ -26,6 +26,7 @@ import javax.swing.ImageIcon;
 
 public class VentanaInicio extends JFrame {
 
+	public static Usuario vale = null;
 	private JPanel contentPane;
 	private JTextField txtHolaQueTal;
 	public static JTextField textUsuario;
@@ -96,7 +97,9 @@ public class VentanaInicio extends JFrame {
 						encontrado = true;
 						VentanaOpcion nuevaVentana = new VentanaOpcion(); 
 						nuevaVentana.setVisible(true);
+						vale = usuario;
 						VentanaInicio.this.dispose();
+						System.out.println(vale);
 						
 						
 					}

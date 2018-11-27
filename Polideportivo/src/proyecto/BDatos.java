@@ -5,7 +5,7 @@ import java.util.ArrayList;
 
 public class BDatos {
 
-	//Login funcional 
+	///////////Login funcional 
 	public static  ArrayList<Usuario> cargar() {
 		//Conectar
 		Connection con = null;
@@ -39,7 +39,7 @@ public class BDatos {
 	}
 	
 	
-	//Nuevo usuario
+	//////////Nuevo usuario
 	public static void nuevoUsuario(Usuario usua) {
 		//Conectar
 		Connection con = null;
@@ -89,7 +89,7 @@ public class BDatos {
 	}
 	
 	
-	//Alquilar producto
+	///////////Alquilar producto
 	public static void alquilarProducto(int a) {
 		//Conectar
 		Connection con = null;
@@ -104,10 +104,13 @@ public class BDatos {
 		}
 		
 		//Restar dinero a la cuenta
+		System.out.println("UPDATE usuario SET dinero = dinero - "+ a +
+					"WHERE nombre = '"+ VentanaInicio.vale.getNombre() +"'");
 		try {
 			//System.out.println(usu.size());
-			PreparedStatement stmt = con.prepareStatement("UPDATE usuario SET dinero = dinero- "+ a +
-					"WHERE nombre = '"+ usu.get(0).getNombre() +"';");
+			
+			PreparedStatement stmt = con.prepareStatement("UPDATE usuario SET dinero = dinero - "+ a +
+					" WHERE nombre = '"+ VentanaInicio.vale.getNombre() +"'");
 			
 			
 			
@@ -119,6 +122,39 @@ public class BDatos {
 		} catch (Exception e) {
 			System.out.println("Error al alquilar producto: "+e.getMessage());
 		}
+	}
+	
+	
+	///////////Reserva instalaciones
+	public static void reservarPista() {
+		//Conectar
+				Connection con = null;
+				String sURL = "jdbc:mysql://127.0.0.1:3306/bdpolideportivo";
+				ArrayList<Usuario> usu = new ArrayList<>();
+				try {
+					con = DriverManager.getConnection(sURL, "root", "Olatz123gc");
+					
+				} catch (SQLException e) {
+					System.out.println("Conexión no establecida, error");
+
+				}
+				
+		//Reservar la pista
+				try {
+					//System.out.println(usu.size());
+					PreparedStatement stmt = con.prepareStatement("UPDATE usuario SET dinero = dinero- " +
+							"WHERE nombre = '"+ "nombre del usuario" +"';");
+					
+					
+					
+					// execute insert SQL stetement
+		            stmt.executeUpdate();
+
+		            System.out.println("Se ha alquilado correctamente :)");
+					
+				} catch (Exception e) {
+					System.out.println("Error al alquilar producto: "+e.getMessage());
+				}		
 	}
 
 }

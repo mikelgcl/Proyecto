@@ -145,7 +145,7 @@ public class VentanaNUsu extends JFrame {
 		btnNewButton.setBounds(0, 0, 350, 93);
 		contentPane.add(btnNewButton);
 		
-		JLabel errorNombre = new JLabel("Entre 1 y 45 car\u00E1cteres ");
+		JLabel errorNombre = new JLabel("Entre 1 y 20 car\u00E1cteres ");
 		errorNombre.setForeground(Color.RED);
 		errorNombre.setFont(new Font("Tahoma", Font.PLAIN, 10));
 		errorNombre.setBounds(135, 102, 215, 14);
@@ -208,7 +208,7 @@ public class VentanaNUsu extends JFrame {
 				String num="";
 				String din="";
 				
-				if (textNombre.getText().length()<=20) {
+				if (textNombre.getText().length()<=20 && textNombre.getText().length()>0) {
 					nom = textNombre.getText();
 					errorNombre.setVisible(false);
 				} else {
@@ -216,14 +216,14 @@ public class VentanaNUsu extends JFrame {
 					
 				}
 			 
-				if (textContrasenya.getText().length()<=45) {
+				if (textContrasenya.getText().length()<=45 && textContrasenya.getText().length()>0) {
 				 con = textContrasenya.getText();
 				 errorContrasenya.setVisible(false);
 				} else {
 					errorContrasenya.setVisible(true);
 				}
 				
-				if(textDNI.getText().length()<=10) {
+				if(textDNI.getText().length()==10) {
 				  dnia = textDNI.getText();
 				  errorDni.setVisible(false);
 				}else {
@@ -231,7 +231,7 @@ public class VentanaNUsu extends JFrame {
 					
 				}
 				
-				if (textCorreo.getText().length()<=45) {
+				if (textCorreo.getText().length()<=45 && textCorreo.getText().length()>=6) {
 					 cor = textCorreo.getText();
 					 errorCorreo.setVisible(false);
 				}else {
@@ -270,15 +270,10 @@ public class VentanaNUsu extends JFrame {
 				
 				
 				
-				
-				//Hacer que si alguno de los errores es visible, no cree al nuevo usuario
-				
-				
-				
-				
-				
-				
-				
+				if (textSecret.getText().length() == 3 && textCad.getText().length() == 6 && textNum.getText().length()==16 
+						&& textCorreo.getText().length()<=45 && textCorreo.getText().length()>=6 && textDNI.getText().length()==10
+						&& textContrasenya.getText().length()<=45 && textContrasenya.getText().length()>0 
+						&& textNombre.getText().length()<=20 && textNombre.getText().length()>0) {
 					Usuario usua = new Usuario(nom, con, dnia, cor, num, numc, fecha, din);
 					System.out.println(usua);
 					BDatos.nuevoUsuario(usua);
@@ -287,6 +282,10 @@ public class VentanaNUsu extends JFrame {
 					VentanaInicio nuevaVentana = new VentanaInicio(); 
 					nuevaVentana.setVisible(true);
 					VentanaNUsu.this.dispose();
+				} else {
+					System.out.println("arregla los errores");
+				}
+					
 				
 					
 				
