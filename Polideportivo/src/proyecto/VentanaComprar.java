@@ -73,8 +73,16 @@ public class VentanaComprar extends JFrame {
 		JButton btnRaquetaTenis = new JButton("Raqueta tenis");
 		btnRaquetaTenis.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				BDatos.alquilarProducto(5);
-				JOptionPane.showMessageDialog(btnRaquetaTenis, "Raqueta de tenis alquilada correctamente", "Alquilar", 1);
+				try {
+					if (Integer.parseInt(VentanaInicio.vale.getDinero()) >= 5) {
+						BDatos.alquilarProducto(5);
+						JOptionPane.showMessageDialog(btnRaquetaTenis, "Raqueta de tenis alquilada correctamente", "Alquilar", 1);
+					} else {
+						JOptionPane.showMessageDialog(btnRaquetaTenis, "No tienes fondos", "Alquilar", 1);
+					}
+				} catch (Exception e) {
+					System.out.println("Error al alquilar producto");
+				}
 			}
 		});
 		btnRaquetaTenis.setBounds(29, 234, 138, 23);
@@ -83,7 +91,16 @@ public class VentanaComprar extends JFrame {
 		JButton btnRaquetaPdel = new JButton("Raqueta p\u00E1del");
 		btnRaquetaPdel.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				JOptionPane.showMessageDialog(btnRaquetaTenis, "Raqueta de pádel alquilada correctamente", "Alquilar", 1);
+				try {
+					if (Integer.parseInt(VentanaInicio.vale.getDinero()) >= 4) {
+						BDatos.alquilarProducto(4);
+						JOptionPane.showMessageDialog(btnRaquetaTenis, "Raqueta de tenis alquilada correctamente", "Alquilar", 1);
+					} else {
+						JOptionPane.showMessageDialog(btnRaquetaTenis, "No tienes fondos", "Alquilar", 1);
+					}
+				} catch (Exception c) {
+					System.out.println("Error al alquilar producto");
+				}
 			}
 		});
 		btnRaquetaPdel.setBounds(229, 234, 138, 23);
@@ -92,7 +109,16 @@ public class VentanaComprar extends JFrame {
 		JButton btnBalnFtbol = new JButton("Bal\u00F3n f\u00FAtbol");
 		btnBalnFtbol.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				JOptionPane.showMessageDialog(btnRaquetaTenis, "Balón de fútbol alquilado correctamente", "Alquilar", 1);
+				try {
+					if (Integer.parseInt(VentanaInicio.vale.getDinero()) >= 4) {
+						BDatos.alquilarProducto(4);
+						JOptionPane.showMessageDialog(btnRaquetaTenis, "Raqueta de tenis alquilada correctamente", "Alquilar", 1);
+					} else {
+						JOptionPane.showMessageDialog(btnRaquetaTenis, "No tienes fondos", "Alquilar", 1);
+					}
+				} catch (Exception f) {
+					System.out.println("Error al alquilar producto");
+				}
 			}
 		});
 		btnBalnFtbol.setBounds(29, 390, 138, 23);
@@ -101,7 +127,16 @@ public class VentanaComprar extends JFrame {
 		JButton btnBalnBaloncesto = new JButton("Bal\u00F3n baloncesto");
 		btnBalnBaloncesto.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				JOptionPane.showMessageDialog(btnRaquetaTenis, "Pelota de baloncesto alquilada correctamente", "Alquilar", 1);
+				try {
+					if (Integer.parseInt(VentanaInicio.vale.getDinero()) >= 3) {
+						BDatos.alquilarProducto(3);
+						JOptionPane.showMessageDialog(btnRaquetaTenis, "Raqueta de tenis alquilada correctamente", "Alquilar", 1);
+					} else {
+						JOptionPane.showMessageDialog(btnRaquetaTenis, "No tienes fondos", "Alquilar", 1);
+					}
+				} catch (Exception g) {
+					System.out.println("Error al alquilar producto");
+				}
 			}
 		});
 		btnBalnBaloncesto.setBounds(229, 390, 138, 23);

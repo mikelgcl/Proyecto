@@ -99,7 +99,7 @@ public class VentanaInicio extends JFrame {
 						nuevaVentana.setVisible(true);
 						vale = usuario;
 						VentanaInicio.this.dispose();
-						System.out.println(vale);
+						
 						
 						
 					}
