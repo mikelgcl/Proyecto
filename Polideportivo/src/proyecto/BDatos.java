@@ -126,11 +126,11 @@ public class BDatos {
 	
 	
 	///////////Reserva instalaciones
-	public static void reservarPista() {
+	public static ArrayList<Pista> cargarPista() {
 		//Conectar
 				Connection con = null;
 				String sURL = "jdbc:mysql://127.0.0.1:3306/bdpolideportivo";
-				ArrayList<Usuario> usu = new ArrayList<>();
+				ArrayList<Pista> pis = new ArrayList<>();
 				try {
 					con = DriverManager.getConnection(sURL, "root", "Olatz123gc");
 					
@@ -140,21 +140,21 @@ public class BDatos {
 				}
 				
 		//Reservar la pista
-				try {
-					//System.out.println(usu.size());
-					PreparedStatement stmt = con.prepareStatement("UPDATE usuario SET dinero = dinero- " +
-							"WHERE nombre = '"+ "nombre del usuario" +"';");
-					
-					
-					
-					// execute insert SQL stetement
-		            stmt.executeUpdate();
+				try (PreparedStatement stmt = con.prepareStatement("SELECT * FROM horas")) {
+					ResultSet rs = stmt.executeQuery();
 
-		            System.out.println("Se ha alquilado correctamente :)");
-					
-				} catch (Exception e) {
-					System.out.println("Error al alquilar producto: "+e.getMessage());
-				}		
+					while (rs.next()) {
+						
+						Pista e = new Pista(rs.getString("nombrePista"), rs.getString("ocho"), rs.getString("nueve"), rs.getString("diez"), rs.getString("once"), rs.getString("doce"), rs.getString("cuatro"), rs.getString("seis"));
+						pis.add(e);
+
+					}
+
+				} catch (SQLException sqle) {
+					System.out.println("Error en la ejecución:" + sqle.getErrorCode() + " " + sqle.getMessage());
+				}
+				
+				return pis;
 	}
 
 }

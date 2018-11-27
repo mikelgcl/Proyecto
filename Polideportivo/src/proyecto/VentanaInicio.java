@@ -32,6 +32,7 @@ public class VentanaInicio extends JFrame {
 	public static JTextField textUsuario;
 	public static JPasswordField textContraseña;
 	private ArrayList<Usuario> usuarios;
+	private ArrayList<Pista> pista;
 
 	/**
 	 * Launch the application.
@@ -142,6 +143,10 @@ public class VentanaInicio extends JFrame {
 		
 		// Carga de usuario
 		usuarios = BDatos.cargar();
+		
+		//Carga de pistas
+		pista = BDatos.cargarPista();
+		System.out.println(pista);
 		setLocationRelativeTo(null);
 		
 		//Hora

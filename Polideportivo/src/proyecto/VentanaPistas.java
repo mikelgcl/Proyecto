@@ -9,6 +9,7 @@ import javax.swing.border.EmptyBorder;
 import java.awt.FlowLayout;
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
+import java.util.ArrayList;
 import java.awt.event.ActionEvent;
 import javax.swing.ImageIcon;
 import java.awt.SystemColor;
@@ -18,6 +19,7 @@ import java.awt.Font;
 public class VentanaPistas extends JFrame {
 
 	private JPanel contentPane;
+	private ArrayList<Pista> pistas;
 
 	/**
 	 * Launch the application.
@@ -68,7 +70,13 @@ public class VentanaPistas extends JFrame {
 		JButton btnNewButton_1 = new JButton("Baloncesto");
 		btnNewButton_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				VentanaBaloncesto nuevaVentana = new VentanaBaloncesto();
+				Pista pistaB = null;
+				for(Pista pista:pistas) {
+					if(pista.getNombre().equals("baloncesto")) {
+						pistaB = pista;
+					}
+				}
+				VentanaBaloncesto nuevaVentana = new VentanaBaloncesto(pistaB);
 				nuevaVentana.setVisible(true);
 				VentanaPistas.this.dispose();
 			}
@@ -80,7 +88,13 @@ public class VentanaPistas extends JFrame {
 		JButton btnFtbol = new JButton("F\u00FAtbol");
 		btnFtbol.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				VentanaFutbol nuevaVentana = new VentanaFutbol();
+				Pista pistaF = null;
+				for(Pista pista:pistas) {
+					if(pista.getNombre().equals("futbol")) {
+						pistaF = pista;
+					}
+				}
+				VentanaBaloncesto nuevaVentana = new VentanaBaloncesto(pistaF);
 				nuevaVentana.setVisible(true);
 				VentanaPistas.this.dispose();
 				
@@ -93,7 +107,13 @@ public class VentanaPistas extends JFrame {
 		JButton btnFutbol = new JButton("Tenis 1");
 		btnFutbol.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				VentanaTenis nuevaVentana = new VentanaTenis();
+				Pista pistaT = null;
+				for(Pista pista:pistas) {
+					if(pista.getNombre().equals("tenis")) {
+						pistaT = pista;
+					}
+				}
+				VentanaBaloncesto nuevaVentana = new VentanaBaloncesto(pistaT);
 				nuevaVentana.setVisible(true);
 				VentanaPistas.this.dispose();
 			}
@@ -106,7 +126,13 @@ public class VentanaPistas extends JFrame {
 		btnAtletismo.addActionListener(new ActionListener() {
 			
 			public void actionPerformed(ActionEvent e) {
-				VentanaPadel2 nuevaVentana = new VentanaPadel2();
+				Pista pistaP2 = null;
+				for(Pista pista:pistas) {
+					if(pista.getNombre().equals("padel2")) {
+						pistaP2 = pista;
+					}
+				}
+				VentanaBaloncesto nuevaVentana = new VentanaBaloncesto(pistaP2);
 				nuevaVentana.setVisible(true);
 				VentanaPistas.this.dispose();
 			}
@@ -118,7 +144,13 @@ public class VentanaPistas extends JFrame {
 		JButton btnTenis = new JButton("P\u00E1del 1");
 		btnTenis.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				VentanaPadel2 nuevaVentana = new VentanaPadel2();
+				Pista pistaP = null;
+				for(Pista pista:pistas) {
+					if(pista.getNombre().equals("padel")) {
+						pistaP = pista;
+					}
+				}
+				VentanaBaloncesto nuevaVentana = new VentanaBaloncesto(pistaP);
 				nuevaVentana.setVisible(true);
 				VentanaPistas.this.dispose();
 			}
@@ -129,7 +161,13 @@ public class VentanaPistas extends JFrame {
 		JButton btnPadel = new JButton("Tenis 2");
 		btnPadel.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				VentanaTenis2 nuevaVentana = new VentanaTenis2();
+				Pista pistaT2 = null;
+				for(Pista pista:pistas) {
+					if(pista.getNombre().equals("tenis2")) {
+						pistaT2 = pista;
+					}
+				}
+				VentanaBaloncesto nuevaVentana = new VentanaBaloncesto(pistaT2);
 				nuevaVentana.setVisible(true);
 				VentanaPistas.this.dispose();
 			}
@@ -144,6 +182,9 @@ public class VentanaPistas extends JFrame {
 		btnNewButton_2.setBounds(0, 0, 376, 98);
 		contentPane.add(btnNewButton_2);
 		setLocationRelativeTo(null);
+		
+		// Cargamos reservas
+		pistas = BDatos.cargarPista();
 	}
 
 }

@@ -18,27 +18,12 @@ import javax.swing.JRadioButton;
 public class VentanaBaloncesto extends JFrame {
 
 	private JPanel contentPane;
-
-	/**
-	 * Launch the application.
-	 */
-	public static void main(String[] args) {
-		EventQueue.invokeLater(new Runnable() {
-			public void run() {
-				try {
-					VentanaBaloncesto frame = new VentanaBaloncesto();
-					frame.setVisible(true);
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-			}
-		});
-	}
+	Pista reservas;
 
 	/**
 	 * Create the frame.
 	 */
-	public VentanaBaloncesto() {
+	public VentanaBaloncesto(Pista reservas) {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 531, 340);
 		contentPane = new JPanel();
@@ -224,8 +209,70 @@ public class VentanaBaloncesto extends JFrame {
 		contentPane.add(btnNewButton_3);
 		setLocationRelativeTo(null);
 		
-		
+		this.reservas = reservas;
 	
+		if (reservas.getSeis().equals("1")) {
+			rdbtnLibre_5.setSelected(true);
+			rdbtnLibre_5.setText("Ocupado");
+			rdbtnLibre_5.setEnabled(false);
+			
+		} else {
+			rdbtnLibre_5.setSelected(false);
+		}
+		
+		if (reservas.getCuatro().equals("1")) {
+			rdbtnLibre_4.setSelected(true);
+			rdbtnLibre_4.setText("Ocupado");
+			rdbtnLibre_4.setEnabled(false);
+			
+		} else {
+			rdbtnLibre_4.setSelected(false);
+		}
+		
+		if (reservas.getDoce().equals("1")) {
+			rdbtnLibre_3.setSelected(true);
+			rdbtnLibre_3.setText("Ocupado");
+			rdbtnLibre_3.setEnabled(false);
+			
+		} else {
+			rdbtnLibre_3.setSelected(false);
+		}
+		
+		if (reservas.getOnce().equals("1")) {
+			rdbtnLibre_2.setSelected(true);
+			rdbtnLibre_2.setText("Ocupado");
+			rdbtnLibre_2.setEnabled(false);
+			
+		} else {
+			rdbtnLibre_2.setSelected(false);
+		}
+		
+		if (reservas.getDiez().equals("1")) {
+			rdbtnLibre_1.setSelected(true);
+			rdbtnLibre_1.setText("Ocupado");
+			rdbtnLibre_1.setEnabled(false);
+			
+		} else {
+			rdbtnLibre_1.setSelected(false);
+		}
+		
+		if (reservas.getNueve().equals("1")) {
+			rdbtnLibre.setSelected(true);
+			rdbtnLibre.setText("Ocupado");
+			rdbtnLibre.setEnabled(false);
+			
+		} else {
+			rdbtnLibre.setSelected(false);
+		}
+		
+		if (reservas.getOcho().equals("1")) {
+			rdbtnNewRadioButton.setSelected(true);
+			rdbtnNewRadioButton.setText("Ocupado");
+			rdbtnNewRadioButton.setEnabled(false);
+			
+		} else {
+			rdbtnNewRadioButton.setSelected(false);
+		}
 	}
 	
 }

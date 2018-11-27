@@ -76,7 +76,7 @@ public class VentanaComprar extends JFrame {
 				try {
 					if (Integer.parseInt(VentanaInicio.vale.getDinero()) >= 5) {
 						BDatos.alquilarProducto(5);
-						JOptionPane.showMessageDialog(btnRaquetaTenis, "Raqueta de tenis alquilada correctamente", "Alquilar", 1);
+						JOptionPane.showMessageDialog(btnRaquetaTenis, "Producto alquilado correctamente", "Alquilar", 1);
 					} else {
 						JOptionPane.showMessageDialog(btnRaquetaTenis, "No tienes fondos", "Alquilar", 1);
 					}
@@ -94,7 +94,7 @@ public class VentanaComprar extends JFrame {
 				try {
 					if (Integer.parseInt(VentanaInicio.vale.getDinero()) >= 4) {
 						BDatos.alquilarProducto(4);
-						JOptionPane.showMessageDialog(btnRaquetaTenis, "Raqueta de tenis alquilada correctamente", "Alquilar", 1);
+						JOptionPane.showMessageDialog(btnRaquetaTenis, "Producto alquilado correctamente", "Alquilar", 1);
 					} else {
 						JOptionPane.showMessageDialog(btnRaquetaTenis, "No tienes fondos", "Alquilar", 1);
 					}
@@ -112,7 +112,7 @@ public class VentanaComprar extends JFrame {
 				try {
 					if (Integer.parseInt(VentanaInicio.vale.getDinero()) >= 4) {
 						BDatos.alquilarProducto(4);
-						JOptionPane.showMessageDialog(btnRaquetaTenis, "Raqueta de tenis alquilada correctamente", "Alquilar", 1);
+						JOptionPane.showMessageDialog(btnRaquetaTenis, "Producto alquilado correctamente", "Alquilar", 1);
 					} else {
 						JOptionPane.showMessageDialog(btnRaquetaTenis, "No tienes fondos", "Alquilar", 1);
 					}
@@ -130,7 +130,7 @@ public class VentanaComprar extends JFrame {
 				try {
 					if (Integer.parseInt(VentanaInicio.vale.getDinero()) >= 3) {
 						BDatos.alquilarProducto(3);
-						JOptionPane.showMessageDialog(btnRaquetaTenis, "Raqueta de tenis alquilada correctamente", "Alquilar", 1);
+						JOptionPane.showMessageDialog(btnRaquetaTenis, "Producto alquilado correctamente", "Alquilar", 1);
 					} else {
 						JOptionPane.showMessageDialog(btnRaquetaTenis, "No tienes fondos", "Alquilar", 1);
 					}
@@ -168,22 +168,22 @@ public class VentanaComprar extends JFrame {
 		btnNewButton.setBounds(0, 0, 548, 87);
 		contentPane.add(btnNewButton);
 		
-		JLabel lblPrecio = new JLabel("Precio: 5 $");
+		JLabel lblPrecio = new JLabel("Precio: 5 \u20AC");
 		lblPrecio.setFont(new Font("Tahoma", Font.BOLD, 11));
 		lblPrecio.setBounds(29, 209, 80, 23);
 		contentPane.add(lblPrecio);
 		
-		JLabel lblPrecio_1 = new JLabel("Precio: 4 $");
+		JLabel lblPrecio_1 = new JLabel("Precio: 4 \u20AC");
 		lblPrecio_1.setFont(new Font("Tahoma", Font.BOLD, 11));
 		lblPrecio_1.setBounds(229, 209, 80, 23);
 		contentPane.add(lblPrecio_1);
 		
-		JLabel lblPrecio_3 = new JLabel("Precio: 3 $");
+		JLabel lblPrecio_3 = new JLabel("Precio: 3 \u20AC");
 		lblPrecio_3.setFont(new Font("Tahoma", Font.BOLD, 11));
 		lblPrecio_3.setBounds(229, 367, 80, 23);
 		contentPane.add(lblPrecio_3);
 		
-		JLabel lblPrecio_2 = new JLabel("Precio: 4 $");
+		JLabel lblPrecio_2 = new JLabel("Precio: 4 \u20AC");
 		lblPrecio_2.setFont(new Font("Tahoma", Font.BOLD, 11));
 		lblPrecio_2.setBounds(29, 367, 80, 23);
 		contentPane.add(lblPrecio_2);
