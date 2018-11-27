@@ -13,7 +13,7 @@ public class BDatos {
 		ArrayList<Usuario> usu = new ArrayList<>();
 		try {
 			con = DriverManager.getConnection(sURL, "root", "Olatz123gc");
-			System.out.println("Conexión establecida");
+			
 		} catch (SQLException e) {
 			System.out.println("Conexión no establecida, error");
 
@@ -33,6 +33,7 @@ public class BDatos {
 		} catch (SQLException sqle) {
 			System.out.println("Error en la ejecución:" + sqle.getErrorCode() + " " + sqle.getMessage());
 		}
+		
 		return usu;
 
 	}
