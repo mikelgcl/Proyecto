@@ -94,7 +94,7 @@ public class VentanaPistas extends JFrame {
 						pistaF = pista;
 					}
 				}
-				VentanaBaloncesto nuevaVentana = new VentanaBaloncesto(pistaF);
+				VentanaFutbol nuevaVentana = new VentanaFutbol(pistaF);
 				nuevaVentana.setVisible(true);
 				VentanaPistas.this.dispose();
 				
@@ -113,7 +113,7 @@ public class VentanaPistas extends JFrame {
 						pistaT = pista;
 					}
 				}
-				VentanaBaloncesto nuevaVentana = new VentanaBaloncesto(pistaT);
+				VentanaTenis nuevaVentana = new VentanaTenis(pistaT);
 				nuevaVentana.setVisible(true);
 				VentanaPistas.this.dispose();
 			}
@@ -132,7 +132,7 @@ public class VentanaPistas extends JFrame {
 						pistaP2 = pista;
 					}
 				}
-				VentanaBaloncesto nuevaVentana = new VentanaBaloncesto(pistaP2);
+				VentanaPadel2 nuevaVentana = new VentanaPadel2(pistaP2);
 				nuevaVentana.setVisible(true);
 				VentanaPistas.this.dispose();
 			}
@@ -150,7 +150,7 @@ public class VentanaPistas extends JFrame {
 						pistaP = pista;
 					}
 				}
-				VentanaBaloncesto nuevaVentana = new VentanaBaloncesto(pistaP);
+				VentanaPadel nuevaVentana = new VentanaPadel(pistaP);
 				nuevaVentana.setVisible(true);
 				VentanaPistas.this.dispose();
 			}
@@ -167,7 +167,7 @@ public class VentanaPistas extends JFrame {
 						pistaT2 = pista;
 					}
 				}
-				VentanaBaloncesto nuevaVentana = new VentanaBaloncesto(pistaT2);
+				VentanaTenis2 nuevaVentana = new VentanaTenis2(pistaT2);
 				nuevaVentana.setVisible(true);
 				VentanaPistas.this.dispose();
 			}

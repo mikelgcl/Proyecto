@@ -9,7 +9,7 @@ public class BDatos {
 	public static  ArrayList<Usuario> cargar() {
 		//Conectar
 		Connection con = null;
-		String sURL = "jdbc:mysql://127.0.0.1:3306/bdpolideportivo";
+		String sURL = "jdbc:mysql://127.0.0.1:3306/bdpolideportivo?verifyServerCertificate=false&useSSL=true";
 		ArrayList<Usuario> usu = new ArrayList<>();
 		try {
 			con = DriverManager.getConnection(sURL, "root", "Olatz123gc");
@@ -104,8 +104,7 @@ public class BDatos {
 		}
 		
 		//Restar dinero a la cuenta
-		System.out.println("UPDATE usuario SET dinero = dinero - "+ a +
-					"WHERE nombre = '"+ VentanaInicio.vale.getNombre() +"'");
+	
 		try {
 			//System.out.println(usu.size());
 			

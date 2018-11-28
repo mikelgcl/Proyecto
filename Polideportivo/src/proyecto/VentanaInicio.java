@@ -146,7 +146,7 @@ public class VentanaInicio extends JFrame {
 		
 		//Carga de pistas
 		pista = BDatos.cargarPista();
-		System.out.println(pista);
+		
 		setLocationRelativeTo(null);
 		
 		//Hora

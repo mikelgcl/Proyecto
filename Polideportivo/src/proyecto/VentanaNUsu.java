@@ -159,7 +159,7 @@ public class VentanaNUsu extends JFrame {
 		contentPane.add(errorContrasenya);
 		errorContrasenya.setVisible(false);
 		
-		JLabel errorDni = new JLabel("10 car\u00E1cteres");
+		JLabel errorDni = new JLabel("9 car\u00E1cteres");
 		errorDni.setForeground(Color.RED);
 		errorDni.setFont(new Font("Tahoma", Font.PLAIN, 10));
 		errorDni.setBounds(135, 186, 215, 14);
@@ -223,7 +223,7 @@ public class VentanaNUsu extends JFrame {
 					errorContrasenya.setVisible(true);
 				}
 				
-				if(textDNI.getText().length()==10) {
+				if(textDNI.getText().length()==9) {
 				  dnia = textDNI.getText();
 				  errorDni.setVisible(false);
 				}else {
@@ -262,8 +262,11 @@ public class VentanaNUsu extends JFrame {
 					errorCadTar.setVisible(true);
 					
 				}
+				double random =  Math.random()*1000;
+				int random2 = (int) random;
+				din = new Integer(random2).toString();
 				
-				din = "500";
+				System.out.println(din);
 				
 				errores = false;
 				
@@ -271,7 +274,7 @@ public class VentanaNUsu extends JFrame {
 				
 				
 				if (textSecret.getText().length() == 3 && textCad.getText().length() == 6 && textNum.getText().length()==16 
-						&& textCorreo.getText().length()<=45 && textCorreo.getText().length()>=6 && textDNI.getText().length()==10
+						&& textCorreo.getText().length()<=45 && textCorreo.getText().length()>=6 && textDNI.getText().length()==9
 						&& textContrasenya.getText().length()<=45 && textContrasenya.getText().length()>0 
 						&& textNombre.getText().length()<=20 && textNombre.getText().length()>0) {
 					Usuario usua = new Usuario(nom, con, dnia, cor, num, numc, fecha, din);
