@@ -174,6 +174,32 @@ public class VentanaBaloncesto extends JFrame {
 		JButton btnNewButton_3 = new JButton("Reservar");
 		btnNewButton_3.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
+				
+				//Metodo restar dinero 
+				if (rdbtnLibre.isEnabled() && rdbtnLibre.isSelected()) {
+					BDatos.restarDinero();
+				}
+				if (rdbtnLibre_1.isEnabled() && rdbtnLibre_1.isSelected()) {
+					BDatos.restarDinero();
+				}
+				if (rdbtnLibre_2.isEnabled() && rdbtnLibre_2.isSelected()) {
+					BDatos.restarDinero();
+				}
+				if (rdbtnLibre_3.isEnabled() && rdbtnLibre_3.isSelected()) {
+					BDatos.restarDinero();
+				}
+				if (rdbtnLibre_4.isEnabled() && rdbtnLibre_4.isSelected()) {
+					BDatos.restarDinero();
+				}
+				if (rdbtnLibre_5.isEnabled() && rdbtnLibre_5.isSelected()) {
+					BDatos.restarDinero();
+				}
+				if (rdbtnNewRadioButton.isEnabled() && rdbtnNewRadioButton.isSelected()) {
+					BDatos.restarDinero();
+				}
+				
+				
+				//Cambiar base de datos y poner ocupado
 				if (rdbtnLibre.isSelected()) {
 					BDatos.reservarPista("nueve", "baloncesto");
 					rdbtnLibre.setText("Ocupado");
@@ -223,6 +249,11 @@ public class VentanaBaloncesto extends JFrame {
 					} else {
 						JOptionPane.showMessageDialog(rdbtnLibre, "Seleccione una hora, por favor");
 					}
+				
+				//Metodo restar dinero 
+				if (rdbtnLibre.isEnabled() && rdbtnLibre.isSelected()) {
+					BDatos.restarDinero();
+				}
 				
 			}
 		});

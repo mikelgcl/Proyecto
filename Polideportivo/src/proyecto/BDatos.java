@@ -9,7 +9,7 @@ public class BDatos {
 	public static  ArrayList<Usuario> cargar() {
 		//Conectar
 		Connection con = null;
-		String sURL = "jdbc:mysql://127.0.0.1:3306/bdpolideportivo?verifyServerCertificate=false&useSSL=true";
+		String sURL = "jdbc:mysql://127.0.0.1:3306/bdpolideportivo?useSSL=false";
 		ArrayList<Usuario> usu = new ArrayList<>();
 		try {
 			con = DriverManager.getConnection(sURL, "root", "Olatz123gc");
@@ -43,7 +43,7 @@ public class BDatos {
 	public static void nuevoUsuario(Usuario usua) {
 		//Conectar
 		Connection con = null;
-		String sURL = "jdbc:mysql://127.0.0.1:3306/bdpolideportivo";
+		String sURL = "jdbc:mysql://127.0.0.1:3306/bdpolideportivo?useSSL=false";
 		ArrayList<Usuario> usu = new ArrayList<>();
 		try {
 			con = DriverManager.getConnection(sURL, "root", "Olatz123gc");
@@ -93,7 +93,7 @@ public class BDatos {
 	public static void alquilarProducto(int a) {
 		//Conectar
 		Connection con = null;
-		String sURL = "jdbc:mysql://127.0.0.1:3306/bdpolideportivo";
+		String sURL = "jdbc:mysql://127.0.0.1:3306/bdpolideportivo?useSSL=false";
 		ArrayList<Usuario> usu = new ArrayList<>();
 		try {
 			con = DriverManager.getConnection(sURL, "root", "Olatz123gc");
@@ -128,7 +128,7 @@ public class BDatos {
 	public static ArrayList<Pista> cargarPista() {
 		//Conectar
 				Connection con = null;
-				String sURL = "jdbc:mysql://127.0.0.1:3306/bdpolideportivo";
+				String sURL = "jdbc:mysql://127.0.0.1:3306/bdpolideportivo?useSSL=false";
 				ArrayList<Pista> pis = new ArrayList<>();
 				try {
 					con = DriverManager.getConnection(sURL, "root", "Olatz123gc");
@@ -160,7 +160,7 @@ public class BDatos {
 	public static void reservarPista(String h, String n) {
 		//Conectar
 		Connection con = null;
-		String sURL = "jdbc:mysql://127.0.0.1:3306/bdpolideportivo";
+		String sURL = "jdbc:mysql://127.0.0.1:3306/bdpolideportivo?useSSL=false";
 		ArrayList<Usuario> usu = new ArrayList<>();
 		try {
 			con = DriverManager.getConnection(sURL, "root", "Olatz123gc");
@@ -191,7 +191,7 @@ public class BDatos {
 	public static void resetPistas() {
 		//Conectar
 		Connection con = null;
-		String sURL = "jdbc:mysql://127.0.0.1:3306/bdpolideportivo";
+		String sURL = "jdbc:mysql://127.0.0.1:3306/bdpolideportivo?useSSL=false";
 		ArrayList<Usuario> usu = new ArrayList<>();
 		try {
 			con = DriverManager.getConnection(sURL, "root", "Olatz123gc");
@@ -227,6 +227,40 @@ public class BDatos {
 		
 		} catch (Exception e) {
 			System.out.println("Error al reservar pista: "+e.getMessage());
+		}
+	}
+	
+	///////////Alquilar producto
+	public static void restarDinero() {
+		//Conectar
+		Connection con = null;
+		String sURL = "jdbc:mysql://127.0.0.1:3306/bdpolideportivo?useSSL=false";
+		ArrayList<Usuario> usu = new ArrayList<>();
+		try {
+			con = DriverManager.getConnection(sURL, "root", "Olatz123gc");
+			//System.out.println("Conexión establecida");
+		} catch (SQLException e) {
+			System.out.println("Conexión no establecida, error");
+
+		}
+	
+		//Restar dinero a la cuenta
+
+		try {
+			//System.out.println(usu.size());
+		
+			PreparedStatement stmt = con.prepareStatement("UPDATE usuario SET dinero = dinero - 10 "
+					+ "WHERE nombre = '"+ VentanaInicio.vale.getNombre() +"'");
+		
+		
+		
+			// execute insert SQL stetement
+			stmt.executeUpdate();
+
+			System.out.println("Se ha alquilado correctamente :)");
+		
+		} catch (Exception e) {
+			System.out.println("Error al alquilar producto: "+e.getMessage());
 		}
 	}
 
