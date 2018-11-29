@@ -8,6 +8,7 @@ import javax.swing.JPanel;
 import javax.swing.JRadioButton;
 import javax.swing.border.EmptyBorder;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.ImageIcon;
 import java.awt.Font;
 import java.awt.SystemColor;
@@ -179,34 +180,54 @@ public class VentanaPadel2 extends JFrame {
 		btnNewButton_3.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				if (rdbtnLibre.isSelected()) {
+					BDatos.reservarPista("nueve", "padel2");
 					rdbtnLibre.setText("Ocupado");
 					rdbtnLibre.setEnabled(false);
+					
 				}
 				if (rdbtnLibre_1.isSelected()) {
+					BDatos.reservarPista("diez", "padel2");
 					rdbtnLibre_1.setText("Ocupado");
 					rdbtnLibre_1.setEnabled(false);
+					
 				}
 				if (rdbtnLibre_2.isSelected()) {
+					BDatos.reservarPista("once", "padel2");
 					rdbtnLibre_2.setText("Ocupado");
 					rdbtnLibre_2.setEnabled(false);
+					
 				}
 				if (rdbtnLibre_3.isSelected()) {
+					BDatos.reservarPista("doce", "padel2");
 					rdbtnLibre_3.setText("Ocupado");
 					rdbtnLibre_3.setEnabled(false);
+					
 				}
 				if (rdbtnLibre_4.isSelected()) {
+					BDatos.reservarPista("cuatro", "padel2");
 					rdbtnLibre_4.setText("Ocupado");
 					rdbtnLibre_4.setEnabled(false);
+					
 				}
 				if (rdbtnLibre_5.isSelected()) {
+					BDatos.reservarPista("seis", "padel2");
 					rdbtnLibre_5.setText("Ocupado");
 					rdbtnLibre_5.setEnabled(false);
+					
 				}
 				if (rdbtnNewRadioButton.isSelected()) {
+					BDatos.reservarPista("ocho", "padel2");
 					rdbtnNewRadioButton.setText("Ocupado");
 					rdbtnNewRadioButton.setEnabled(false);
+					
 				}
 				
+				if (rdbtnLibre.isSelected() || rdbtnLibre_1.isSelected() || rdbtnLibre_2.isSelected() || rdbtnLibre_3.isSelected()
+						||rdbtnLibre_4.isSelected() || rdbtnLibre_5.isSelected() || rdbtnNewRadioButton.isSelected()){
+						JOptionPane.showMessageDialog(rdbtnLibre, "La reserva se ha efectuado correctamente");
+					} else {
+						JOptionPane.showMessageDialog(rdbtnLibre, "Seleccione una hora, por favor");
+					}
 				
 				
 			}

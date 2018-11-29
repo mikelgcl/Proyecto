@@ -155,5 +155,36 @@ public class BDatos {
 				
 				return pis;
 	}
+	
+///////////Reservar pista
+public static void reservarPista(String h, String n) {
+	//Conectar
+	Connection con = null;
+	String sURL = "jdbc:mysql://127.0.0.1:3306/bdpolideportivo";
+	ArrayList<Usuario> usu = new ArrayList<>();
+	try {
+		con = DriverManager.getConnection(sURL, "root", "Olatz123gc");
+		//System.out.println("Conexión establecida");
+	} catch (SQLException e) {
+		System.out.println("Conexión no establecida, error");
+
+	}
+	
+	//Poner un 1 en la base de datos
+
+	try {
+		
+		PreparedStatement stmt = con.prepareStatement("UPDATE horas SET " + h + " = 1 WHERE nombrePista = '" + n + "' ");
+		
+		
+		
+		// execute insert SQL stetement
+      stmt.executeUpdate();
+
+		
+	} catch (Exception e) {
+		System.out.println("Error al reservar pista: "+e.getMessage());
+	}
+}
 
 }
