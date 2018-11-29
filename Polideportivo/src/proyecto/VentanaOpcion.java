@@ -21,25 +21,14 @@ public class VentanaOpcion extends JFrame {
 	/**
 	 * Launch the application.
 	 */
-	public static void main(String[] args) {
-		EventQueue.invokeLater(new Runnable() {
-			public void run() {
-				try {
-					VentanaOpcion frame = new VentanaOpcion();
-					frame.setVisible(true);
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-			}
-		});
-	}
+	
 
 	/**
 	 * Create the frame.
 	 */
 	public VentanaOpcion() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 540, 316);
+		setBounds(100, 100, 536, 329);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
@@ -92,6 +81,21 @@ public class VentanaOpcion extends JFrame {
 		btnNewButton_1.setBackground(SystemColor.textHighlight);
 		btnNewButton_1.setBounds(0, 0, 524, 96);
 		contentPane.add(btnNewButton_1);
+		
+		JButton btnNewButton_2 = new JButton("Cerrar sesi\u00F3n");
+		btnNewButton_2.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				//Cerrar sesión
+				VentanaInicio nuevaVentana = new VentanaInicio();
+				nuevaVentana.setVisible(true);
+				VentanaOpcion.this.dispose();
+				
+			}
+		});
+		btnNewButton_2.setForeground(SystemColor.text);
+		btnNewButton_2.setBackground(SystemColor.textHighlight);
+		btnNewButton_2.setBounds(35, 254, 131, 23);
+		contentPane.add(btnNewButton_2);
 		setLocationRelativeTo(null);
 	}
 
