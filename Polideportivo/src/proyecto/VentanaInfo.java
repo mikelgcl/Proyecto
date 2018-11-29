@@ -16,6 +16,7 @@ import java.awt.Scrollbar;
 import javax.swing.JTextPane;
 import javax.swing.JScrollBar;
 import javax.swing.JScrollPane;
+import javax.swing.JTextArea;
 import javax.swing.ScrollPaneConstants;
 import java.awt.SystemColor;
 
@@ -69,7 +70,7 @@ public class VentanaInfo extends JFrame {
 		contentPane.add(scrollPane);
 		
 		//Esto es lo que falla
-		JTextPane txtpnAaa = new JTextPane();
+		JTextArea txtpnAaa = new JTextArea();
 		txtpnAaa.setEditable(false);
 		txtpnAaa.setText("Polideportivo Deusto\r\n" + 
 				"\r\n" + 
