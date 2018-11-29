@@ -14,7 +14,10 @@ import java.awt.event.ActionEvent;
 import javax.swing.ImageIcon;
 import java.awt.SystemColor;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
+
 import java.awt.Font;
+import java.awt.Color;
 
 public class VentanaPistas extends JFrame {
 
@@ -24,18 +27,7 @@ public class VentanaPistas extends JFrame {
 	/**
 	 * Launch the application.
 	 */
-	public static void main(String[] args) {
-		EventQueue.invokeLater(new Runnable() {
-			public void run() {
-				try {
-					VentanaPistas frame = new VentanaPistas();
-					frame.setVisible(true);
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-			}
-		});
-	}
+	
 
 	/**
 	 * Create the frame.
@@ -70,6 +62,7 @@ public class VentanaPistas extends JFrame {
 		JButton btnNewButton_1 = new JButton("Baloncesto");
 		btnNewButton_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				BDatos.cargarPista();
 				Pista pistaB = null;
 				for(Pista pista:pistas) {
 					if(pista.getNombre().equals("baloncesto")) {
@@ -88,6 +81,7 @@ public class VentanaPistas extends JFrame {
 		JButton btnFtbol = new JButton("F\u00FAtbol");
 		btnFtbol.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				BDatos.cargarPista();
 				Pista pistaF = null;
 				for(Pista pista:pistas) {
 					if(pista.getNombre().equals("futbol")) {
@@ -107,6 +101,7 @@ public class VentanaPistas extends JFrame {
 		JButton btnFutbol = new JButton("Tenis 1");
 		btnFutbol.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				BDatos.cargarPista();
 				Pista pistaT = null;
 				for(Pista pista:pistas) {
 					if(pista.getNombre().equals("tenis")) {
@@ -126,6 +121,7 @@ public class VentanaPistas extends JFrame {
 		btnAtletismo.addActionListener(new ActionListener() {
 			
 			public void actionPerformed(ActionEvent e) {
+				BDatos.cargarPista();
 				Pista pistaP2 = null;
 				for(Pista pista:pistas) {
 					if(pista.getNombre().equals("padel2")) {
@@ -144,6 +140,7 @@ public class VentanaPistas extends JFrame {
 		JButton btnTenis = new JButton("P\u00E1del 1");
 		btnTenis.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				BDatos.cargarPista();
 				Pista pistaP = null;
 				for(Pista pista:pistas) {
 					if(pista.getNombre().equals("padel")) {
@@ -161,6 +158,7 @@ public class VentanaPistas extends JFrame {
 		JButton btnPadel = new JButton("Tenis 2");
 		btnPadel.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				BDatos.cargarPista();
 				Pista pistaT2 = null;
 				for(Pista pista:pistas) {
 					if(pista.getNombre().equals("tenis2")) {
@@ -181,6 +179,31 @@ public class VentanaPistas extends JFrame {
 		btnNewButton_2.setEnabled(false);
 		btnNewButton_2.setBounds(0, 0, 376, 98);
 		contentPane.add(btnNewButton_2);
+		
+		JButton reset = new JButton("RESETEAR PISTAS");
+		reset.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				BDatos.resetPistas();
+				BDatos.cargarPista();
+				JOptionPane.showMessageDialog(reset, "Las pistas se han reseteado correctamente");
+				
+				VentanaPistas.this.dispose();
+				VentanaOpcion nuevaVentana = new VentanaOpcion(); 
+				nuevaVentana.setVisible(true);
+				
+			}
+		});
+		reset.setForeground(new Color(255, 255, 255));
+		reset.setFont(new Font("Tahoma", Font.BOLD, 13));
+		reset.setBackground(new Color(255, 0, 0));
+		reset.setBounds(136, 343, 229, 23);
+		contentPane.add(reset);
+		if (VentanaInicio.vale.getNombre().equals("admin")) {
+			reset.setVisible(true);
+		} else {
+			reset.setVisible(false);
+		}
+		
 		setLocationRelativeTo(null);
 		
 		// Cargamos reservas

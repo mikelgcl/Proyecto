@@ -156,35 +156,80 @@ public class BDatos {
 				return pis;
 	}
 	
-///////////Reservar pista
-public static void reservarPista(String h, String n) {
-	//Conectar
-	Connection con = null;
-	String sURL = "jdbc:mysql://127.0.0.1:3306/bdpolideportivo";
-	ArrayList<Usuario> usu = new ArrayList<>();
-	try {
-		con = DriverManager.getConnection(sURL, "root", "Olatz123gc");
-		//System.out.println("Conexión establecida");
-	} catch (SQLException e) {
-		System.out.println("Conexión no establecida, error");
+	///////////Reservar pista
+	public static void reservarPista(String h, String n) {
+		//Conectar
+		Connection con = null;
+		String sURL = "jdbc:mysql://127.0.0.1:3306/bdpolideportivo";
+		ArrayList<Usuario> usu = new ArrayList<>();
+		try {
+			con = DriverManager.getConnection(sURL, "root", "Olatz123gc");
+			//System.out.println("Conexión establecida");
+		} catch (SQLException e) {
+			System.out.println("Conexión no establecida, error");
 
-	}
+		}
 	
-	//Poner un 1 en la base de datos
+		//Poner un 1 en la base de datos
 
-	try {
+		try {
 		
-		PreparedStatement stmt = con.prepareStatement("UPDATE horas SET " + h + " = 1 WHERE nombrePista = '" + n + "' ");
+			PreparedStatement stmt = con.prepareStatement("UPDATE horas SET " + h + " = 1 WHERE nombrePista = '" + n + "' ");
 		
 		
 		
-		// execute insert SQL stetement
-      stmt.executeUpdate();
+			// execute insert SQL stetement
+			stmt.executeUpdate();
 
 		
-	} catch (Exception e) {
-		System.out.println("Error al reservar pista: "+e.getMessage());
+		} catch (Exception e) {
+			System.out.println("Error al reservar pista: "+e.getMessage());
+		}
 	}
-}
+
+	///////////Reservar pista
+	public static void resetPistas() {
+		//Conectar
+		Connection con = null;
+		String sURL = "jdbc:mysql://127.0.0.1:3306/bdpolideportivo";
+		ArrayList<Usuario> usu = new ArrayList<>();
+		try {
+			con = DriverManager.getConnection(sURL, "root", "Olatz123gc");
+			//System.out.println("Conexión establecida");
+		} catch (SQLException e) {
+			System.out.println("Conexión no establecida, error");
+
+		}
+	
+		//Poner un 0 en las pistas
+
+		try {
+		
+			PreparedStatement stmt = con.prepareStatement("UPDATE horas SET ocho = 0");
+			PreparedStatement stmt2 = con.prepareStatement("UPDATE horas SET nueve = 0");
+			PreparedStatement stmt3 = con.prepareStatement("UPDATE horas SET diez = 0");
+			PreparedStatement stmt4 = con.prepareStatement("UPDATE horas SET once = 0");
+			PreparedStatement stmt5 = con.prepareStatement("UPDATE horas SET doce = 0");
+			PreparedStatement stmt6 = con.prepareStatement("UPDATE horas SET cuatro = 0");
+			PreparedStatement stmt7 = con.prepareStatement("UPDATE horas SET seis = 0");
+		
+		
+			// execute insert SQL stetement
+			stmt.executeUpdate();
+			stmt2.executeUpdate();
+			stmt3.executeUpdate();
+			stmt4.executeUpdate();
+			stmt5.executeUpdate();
+			stmt6.executeUpdate();
+			stmt7.executeUpdate();
+			
+			System.out.println("Pistas reseteadas correctamente :(");
+		
+		} catch (Exception e) {
+			System.out.println("Error al reservar pista: "+e.getMessage());
+		}
+	}
+
+
 
 }

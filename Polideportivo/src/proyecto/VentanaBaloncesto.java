@@ -15,6 +15,7 @@ import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import java.awt.SystemColor;
 import javax.swing.JRadioButton;
+import java.awt.Color;
 
 public class VentanaBaloncesto extends JFrame {
 
@@ -294,5 +295,4 @@ public class VentanaBaloncesto extends JFrame {
 			rdbtnNewRadioButton.setSelected(false);
 		}
 	}
-	
 }
