@@ -95,6 +95,8 @@ public class VentanaInfo extends JFrame {
 				"Diríjase al propio polideportivo para aclarar problemas o contacte con el polideportivo por email.\r\n" + 
 				"");
 		scrollPane.setViewportView(txtpnAaa);
+		txtpnAaa.setSelectionStart(0);
+		txtpnAaa.setSelectionEnd(0);
 		
 		JButton btnNewButton = new JButton("");
 		btnNewButton.setEnabled(false);
