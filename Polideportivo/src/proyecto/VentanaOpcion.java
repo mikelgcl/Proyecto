@@ -98,7 +98,7 @@ public class VentanaOpcion extends JFrame {
 		btnNewButton_2.setBounds(35, 254, 131, 23);
 		contentPane.add(btnNewButton_2);
 		
-		/*
+		
 		JButton btnNewButton_3 = new JButton("Bloquear ");
 		btnNewButton_3.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -114,7 +114,7 @@ public class VentanaOpcion extends JFrame {
 			btnNewButton_3.setVisible(true);
 		} else {
 			btnNewButton_3.setVisible(false);
-		}*/
+		}
 		
 		setLocationRelativeTo(null);
 	}

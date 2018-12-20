@@ -96,9 +96,10 @@ public class VentanaInicio extends JFrame {
 
 					if (usuario.getNombre().equals(usuarioTxt) && usuario.getContrasenya().equals(pass)) {
 						encontrado = true;
+						vale = usuario;
 						VentanaOpcion nuevaVentana = new VentanaOpcion(); 
 						nuevaVentana.setVisible(true);
-						vale = usuario;
+						
 						VentanaInicio.this.dispose();
 						
 						
