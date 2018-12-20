@@ -209,6 +209,7 @@ public class VentanaPistas extends JFrame {
 		btnAadirPista.setBackground(Color.RED);
 		btnAadirPista.setBounds(137, 343, 103, 23);
 		contentPane.add(btnAadirPista);
+		
 		if (VentanaInicio.vale.getNombre().equals("admin")) {
 			reset.setVisible(true);
 			btnAadirPista.setVisible(true);

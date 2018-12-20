@@ -16,6 +16,7 @@ import java.awt.event.ActionEvent;
 import java.awt.SystemColor;
 import javax.swing.JRadioButton;
 import java.awt.Color;
+import javax.swing.JComboBox;
 
 public class VentanaBaloncesto extends JFrame {
 
@@ -43,11 +44,6 @@ public class VentanaBaloncesto extends JFrame {
 		lblActividadBaloncesto.setFont(new Font("Tahoma", Font.BOLD, 25));
 		lblActividadBaloncesto.setBounds(22, 115, 160, 27);
 		contentPane.add(lblActividadBaloncesto);
-		
-		JLabel lblElijaUnaFecha = new JLabel("Elija una hora:");
-		lblElijaUnaFecha.setFont(new Font("Tahoma", Font.BOLD, 15));
-		lblElijaUnaFecha.setBounds(22, 143, 225, 27);
-		contentPane.add(lblElijaUnaFecha);
 		
 		JButton btnNewButton = new JButton("Atr\u00E1s");
 		btnNewButton.setForeground(SystemColor.controlLtHighlight);
@@ -259,6 +255,17 @@ public class VentanaBaloncesto extends JFrame {
 		});
 		btnNewButton_3.setBounds(403, 263, 89, 23);
 		contentPane.add(btnNewButton_3);
+		
+		JComboBox comboBox = new JComboBox();
+		comboBox.setBounds(22, 150, 135, 20);
+		contentPane.add(comboBox);
+		comboBox.addItem("21/12/18");
+		comboBox.addItem("22/12/18");
+		comboBox.addItem("23/12/18");
+		comboBox.addItem("24/12/18");
+		comboBox.addItem("25/12/18");
+		comboBox.addItem("26/12/18");
+		comboBox.addItem("27/12/18");
 		setLocationRelativeTo(null);
 		
 		this.reservas = reservas;
