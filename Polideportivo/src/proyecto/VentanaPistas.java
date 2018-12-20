@@ -56,7 +56,7 @@ public class VentanaPistas extends JFrame {
 		lblNewLabel.setForeground(SystemColor.window);
 		lblNewLabel.setBounds(10, 11, 355, 77);
 		contentPane.add(lblNewLabel);
-		btnNewButton.setBounds(10, 343, 98, 23);
+		btnNewButton.setBounds(10, 343, 104, 23);
 		contentPane.add(btnNewButton);
 		
 		JButton btnNewButton_1 = new JButton("Baloncesto");
@@ -180,7 +180,7 @@ public class VentanaPistas extends JFrame {
 		btnNewButton_2.setBounds(0, 0, 376, 98);
 		contentPane.add(btnNewButton_2);
 		
-		JButton reset = new JButton("RESETEAR PISTAS");
+		JButton reset = new JButton("RESETEAR");
 		reset.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				BDatos.resetPistas();
@@ -196,12 +196,25 @@ public class VentanaPistas extends JFrame {
 		reset.setForeground(new Color(255, 255, 255));
 		reset.setFont(new Font("Tahoma", Font.BOLD, 13));
 		reset.setBackground(new Color(255, 0, 0));
-		reset.setBounds(136, 343, 229, 23);
+		reset.setBounds(262, 343, 103, 23);
 		contentPane.add(reset);
+		
+		JButton btnAadirPista = new JButton("A\u00F1adir pista");
+		btnAadirPista.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+			}
+		});
+		btnAadirPista.setForeground(Color.WHITE);
+		btnAadirPista.setFont(new Font("Tahoma", Font.BOLD, 13));
+		btnAadirPista.setBackground(Color.RED);
+		btnAadirPista.setBounds(137, 343, 103, 23);
+		contentPane.add(btnAadirPista);
 		if (VentanaInicio.vale.getNombre().equals("admin")) {
 			reset.setVisible(true);
+			btnAadirPista.setVisible(true);
 		} else {
 			reset.setVisible(false);
+			btnAadirPista.setVisible(false);
 		}
 		
 		setLocationRelativeTo(null);
@@ -209,5 +222,4 @@ public class VentanaPistas extends JFrame {
 		// Cargamos reservas
 		pistas = BDatos.cargarPista();
 	}
-
 }

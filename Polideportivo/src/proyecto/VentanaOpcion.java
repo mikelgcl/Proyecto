@@ -13,6 +13,7 @@ import javax.swing.JLabel;
 import java.awt.Font;
 import java.awt.SystemColor;
 import javax.swing.UIManager;
+import java.awt.Color;
 
 public class VentanaOpcion extends JFrame {
 
@@ -96,6 +97,22 @@ public class VentanaOpcion extends JFrame {
 		btnNewButton_2.setBackground(SystemColor.textHighlight);
 		btnNewButton_2.setBounds(35, 254, 131, 23);
 		contentPane.add(btnNewButton_2);
+		
+		JButton btnNewButton_3 = new JButton("Bloquear ");
+		btnNewButton_3.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				btnComprarProductos.setEnabled(false);
+			}
+		});
+		btnNewButton_3.setBackground(UIManager.getColor("ToolBar.dockingForeground"));
+		btnNewButton_3.setForeground(Color.WHITE);
+		btnNewButton_3.setBounds(190, 254, 138, 23);
+		contentPane.add(btnNewButton_3);
+		/*if (VentanaInicio.vale.getNombre().equals("admin")) {
+			btnNewButton_3.setVisible(true);
+		} else {
+			btnNewButton_3.setVisible(false);
+		}*/
 		setLocationRelativeTo(null);
 	}
 
